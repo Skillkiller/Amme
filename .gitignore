@@ -69,5 +69,5 @@ target/classes/core/
 target/classes/listeners/
 target/classes/util/
 target/generated-sources/
-src/main/java/util/STATICS.java
-src/main/java/util/STATICS.java
+
+/src/main/java/util/STATICS.java
