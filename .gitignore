@@ -61,3 +61,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.idea/vcs.xml
+src/test/
+target/classes/audioCore/
+target/classes/commands/
+target/classes/core/
+target/classes/listeners/
+target/classes/util/
+target/generated-sources/
+src/main/java/util/STATICS.java
