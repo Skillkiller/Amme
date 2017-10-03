@@ -16,7 +16,6 @@ import net.dv8tion.jda.core.OnlineStatus;
  */
 public class STATICS {
 
-    public static String TOKEN = "";
 
     public static OnlineStatus STATUS = OnlineStatus.ONLINE;
 

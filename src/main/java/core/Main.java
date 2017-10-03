@@ -9,6 +9,7 @@ import commands.essentials.github;
 import commands.essentials.guildstart;
 import commands.essentials.help;
 import commands.etc.SpeedTest;
+import commands.etc.gif;
 import commands.music.Music;
 import listeners.*;
 import net.dv8tion.jda.core.AccountType;
@@ -17,6 +18,7 @@ import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.Game;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import util.LVL;
+import util.SECRETS;
 import util.SQL;
 import util.STATICS;
 
@@ -49,7 +51,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         builder = new JDABuilder(AccountType.BOT)
-                .setToken(STATICS.TOKEN)
+                .setToken(SECRETS.TOKEN)
                 .setAudioEnabled(true)
                 .setAutoReconnect(true)
                 .setStatus(STATICS.STATUS)
@@ -80,6 +82,7 @@ public class Main {
         commands.put("startup", new guildstart());
         commands.put("rank", new getLvl());
         commands.put("github", new github());
+        commands.put("gif", new gif());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());

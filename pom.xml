@@ -68,6 +68,13 @@
             <version>3.15.1
             </version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/at.mukprojects/giphy4j -->
+        <dependency>
+            <groupId>at.mukprojects</groupId>
+            <artifactId>giphy4j</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
     </dependencies>
 
     <build>

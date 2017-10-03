@@ -25,10 +25,10 @@ public class LVL {
 
 
                 connection = DriverManager.getConnection("jdbc:sqlite:points.sqlite");
-                System.out.println("[Amme] MySQL connected");
+                System.out.println("[Amme] Leveler connected");
 
             } catch (SQLException e) {
-                System.out.println("[Amme] MySQL connection failed");
+                System.out.println("[Amme] Leveler connection failed");
                 e.printStackTrace();
             }
         }

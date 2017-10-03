@@ -25,10 +25,10 @@ public class SQL {
 
 
                 connection = DriverManager.getConnection("jdbc:sqlite:lvl.sqlite");
-                System.out.println("[Amme] MySQL connected");
+                System.out.println("[Amme] GuildLogger Online");
 
             } catch (SQLException e) {
-                System.out.println("[Amme] MySQL connection failed");
+                System.out.println("[Amme] GuildLogger connection failed");
                 e.printStackTrace();
             }
         }
