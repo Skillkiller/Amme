@@ -1,0 +1,2 @@
+# Amme
+Jda Discord Bot
