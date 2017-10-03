@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="STATICS.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="STATICS.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="131">
@@ -51,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Amaya/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="613">
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
         <option value="$PROJECT_DIR$/../Amaya/.gitignore" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
       </list>
     </option>
   </component>
@@ -775,18 +775,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="613">
           <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
           <folding />
         </state>
       </provider>
