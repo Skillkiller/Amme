@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e53492-1b90-40d4-ac17-a9464299065d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Amaya/.gitignore" afterPath="$PROJECT_DIR$/../Amaya/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/../Amaya/out/" />
