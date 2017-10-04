@@ -1,10 +1,12 @@
 package listeners;
 
 import net.dv8tion.jda.core.OnlineStatus;
+import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import util.SQL;
 
 import static net.dv8tion.jda.core.OnlineStatus.ONLINE;
 
@@ -23,10 +25,12 @@ import static net.dv8tion.jda.core.OnlineStatus.ONLINE;
 public class writecomment extends ListenerAdapter{
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         if (event.getMessage().getMentionedUsers().size() < 1) return;
+        Guild g = event.getGuild();
+        User user = event.getMessage().getMentionedUsers().get(0);
+        OnlineStatus us = event.getGuild().getMember(user).getOnlineStatus();
+        if (event.getMessage().getMentionedUsers().size() < 1) return;
         if (event.getAuthor().isBot()) return;
-        if (event.getGuild().getOwner().getUser().getId().equals("221905671296253953")) return;
-        User ment = event.getMessage().getMentionedUsers().get(0);
-        OnlineStatus us = event.getGuild().getMember(ment).getOnlineStatus();
+        if (SQL.getValue(g, "msg").equals("0")) return;
         if (!us.equals(ONLINE)){
             Message msg = event.getChannel().sendMessage("Hey, " + event.getAuthor().getAsMention() + " " + event.getMessage().getMentionedUsers().get(0).getAsMention() + " is " + us + " you can wait long to get an Answer!").complete();
             try {

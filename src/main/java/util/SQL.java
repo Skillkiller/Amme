@@ -53,7 +53,7 @@ public class SQL {
 
     public static void createServer(Guild guild){
         try{
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `schlaubibot`(`ownerid`, `serverid`) VALUES ( ?, ?)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `schlaubibot`(`ownerid`, `serverid`, `msg`) VALUES ( ?, ?, 1)");
             ps.setString(1, guild.getOwner().getUser().getId());
             ps.setString(2, guild.getId());
             ps.execute();

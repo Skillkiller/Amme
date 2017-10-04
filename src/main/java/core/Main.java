@@ -8,8 +8,10 @@ import commands.chat.say;
 import commands.essentials.github;
 import commands.essentials.guildstart;
 import commands.essentials.help;
+import commands.essentials.settings;
 import commands.etc.SpeedTest;
 import commands.etc.gif;
+import commands.etc.lmgtfy;
 import commands.music.Music;
 import listeners.*;
 import net.dv8tion.jda.core.AccountType;
@@ -83,6 +85,8 @@ public class Main {
         commands.put("rank", new getLvl());
         commands.put("github", new github());
         commands.put("gif", new gif());
+        commands.put("lmgtfy", new lmgtfy());
+        commands.put("settings", new settings());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
