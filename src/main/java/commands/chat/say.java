@@ -1,6 +1,7 @@
 package commands.chat;
 
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import util.Logger;
 import util.STATICS;
@@ -49,6 +50,7 @@ public class say implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("say", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

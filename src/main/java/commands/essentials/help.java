@@ -1,6 +1,7 @@
 package commands.essentials;
 
 import commands.Command;
+import core.CoreCommands;
 import core.Main;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.PrivateChannel;
@@ -28,7 +29,6 @@ import java.util.TreeMap;
  * © DARK DEVS 2017
  */
 public class help implements Command {
-
     EmbedBuilder eb = new EmbedBuilder();
 
     private String getPermPre(int lvl) {
@@ -39,8 +39,6 @@ public class help implements Command {
             default: return ":1234:";
         }
     }
-
-
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         return false;
@@ -56,7 +54,7 @@ public class help implements Command {
                     ).queue();
                 else
                     event.getTextChannel().sendMessage(
-                            eb.setColor(Color.red).setDescription(":warning:  There is no information for the command  *-" + args[0] + "* !").build()
+                            eb.setColor(Color.red).setDescription(":warning:  There are currently no information for the command  *-" + args[0] + "* !").build()
                     ).queue();
             else
                 event.getTextChannel().sendMessage(
@@ -65,7 +63,6 @@ public class help implements Command {
             return;
         }
 
-
         event.getMessage().delete().queue();
 
         Map<String, String> cmds = new TreeMap<>();
@@ -73,15 +70,16 @@ public class help implements Command {
 
         StringBuilder ciams = new StringBuilder();
 
-
-        String[] ignorers = {};
+        String[] ignorers = {"bpoll", "test", "r", "c", "bj", "ttt", "userinfo", "dev", "nudge", "poll", "moveall", "purge", "info", "suggestion", "r6", };
         Arrays.stream(ignorers).forEach(s -> cmds.remove(s));
+
 
         try {
 
             PrivateChannel pc = event.getAuthor().openPrivateChannel().complete();
             pc.sendMessage(":clipboard:  __**COMMAND LIST**__  :clipboard: \n\n" +
-                    ":point_right:   Dreißt kopiert von **https://github.com/zekroTJA**\n\n" +
+                    "If you want a full list of commands with description, please take a look there:\n" +
+                    ":point_right:   **http://zekrosbot.zekro.de**\n\n" +
                     "***Legend:***\n" +
                     "  :1234:  -  Usable for everyone\n" +
                     "  :one:  -  Only for groups `" + Arrays.toString(STATICS.PERMS).replace("[", "").replace("]", "") + "`\n" +
@@ -143,27 +141,26 @@ public class help implements Command {
                     ));
             pc.sendMessage(new EmbedBuilder().setColor(new Color(0, 255, 126)).setDescription(ciams.toString()).build()).queue();
 
-            ciams.delete(0, ciams.length());
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
-
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
-        Logger.logCommand("help", event);
+    public void executed(boolean success, MessageReceivedEvent e) {
+        Logger.logCommand("help", e);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + e.getMessage().getContent() + "' was executed by '" + e.getAuthor().getName() + "' (" + e.getGuild().getName() + ") in (" + e.getTextChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return null;
+        return "HIIIIIIIILFE";
     }
 
     @Override
     public String description() {
-        return "HILFE!!!!!!!!!!";
+        return "Send this help.";
     }
 
     @Override

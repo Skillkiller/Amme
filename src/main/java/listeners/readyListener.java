@@ -3,6 +3,9 @@ package listeners;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import util.STATICS;
+
+import java.util.Date;
 
 /**
  * Butler´s JDA BOT
@@ -28,6 +31,8 @@ public class readyListener extends ListenerAdapter {
         }
 
         System.out.println(out);
+
+        STATICS.lastRestart = new Date();
 
 
 

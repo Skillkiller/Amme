@@ -2,6 +2,8 @@ package util;
 
 import net.dv8tion.jda.core.OnlineStatus;
 
+import java.util.Date;
+
 /**
  * Butler´s JDA BOT
  * <p>
@@ -30,6 +32,10 @@ public class STATICS {
     public static String input;
 
     public static int music_volume = 0;
+
+    public static int reconnectCount = 0;
+
+    public static Date lastRestart;
 
     public class CMDTYPE {
         public static final String administration = "Administration";

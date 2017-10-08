@@ -37,10 +37,8 @@ public class commandListener extends ListenerAdapter {
         if (e.getChannelType().equals(ChannelType.PRIVATE)) return;
 
         if (e.getMessage().getContent().startsWith(STATICS.PREFIX) && e.getMessage().getAuthor().getId() != e.getJDA().getSelfUser().getId()) {
-            //if (!commands.guildAdministration.Blacklist.check(e.getAuthor(), e.getGuild())) return;
             try {
                 Main.handleCommand(Main.parser.parse(e.getMessage().getContent(), e));
-                System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + e.getMessage().getContent() + "' was executed by '" + e.getAuthor().getName() + "' (" + e.getGuild().getName() + ") in (" + e.getTextChannel().getId() + ") ");
                 ArrayList<String> list = new ArrayList<>();
                 list.add(e.getGuild().getId());
                 list.add(CoreCommands.getCurrentSystemTime());

@@ -16,6 +16,7 @@ import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackInfo;
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.entities.*;
@@ -694,6 +695,7 @@ public class Music implements Command {
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("music", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override
@@ -702,7 +704,6 @@ public class Music implements Command {
                 ":musical_note:  **MUSIC PLAYER**  :musical_note: \n\n" +
                         "` -music play <yt/soundcloud - URL> `  -  Start playing a track / Add a track to queue / Add a playlist to queue\n" +
                         "` -music playnext <yt/soundcloud - URL>  -  Add track or playlist direct after the current song in queue`\n" +
-                        "` -music ytplay <Search string for yt> `  -  Same like *play*, just let youtube search for a track you enter\n" +
                         "` -music queue <Side>`  -  Show the current music queue\n" +
                         "` -music skip `  -  Skip the current track in queue\n" +
                         "` -music now `  -  Show info about the now playing track\n" +

@@ -44,6 +44,7 @@ public class restart implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("restart", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

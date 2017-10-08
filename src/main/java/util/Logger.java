@@ -1,7 +1,9 @@
 package util;
 
 import net.dv8tion.jda.core.entities.Guild;
+import net.dv8tion.jda.core.entities.Member;
 import net.dv8tion.jda.core.entities.TextChannel;
+import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 import java.awt.*;
@@ -23,8 +25,9 @@ public class Logger {
         Guild guild = event.getGuild();
         if (!guild.getOwner().getUser().getId().equals("221905671296253953")) return;
 
-
+        String us = event.getMember().getNickname();
         TextChannel channel = guild.getTextChannelById("364425303088431106");
-        embedSender.sendEmbed("[Command] `" + STATICS.PREFIX +  command + "` was executed by **" + event.getMember().getNickname() + " (" + event.getAuthor().getName()+ "#" + event.getAuthor().getDiscriminator() + ")**", channel, Color.cyan);
+        if (us.equals(null)) {us = event.getAuthor().getName(); }
+        embedSender.sendEmbed("[Command] `" + STATICS.PREFIX +  command + "` was executed by **" + us + " (" + event.getAuthor().getName()+ "#" + event.getAuthor().getDiscriminator() + ")**", channel, Color.cyan);
     }
 }

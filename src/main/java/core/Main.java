@@ -4,6 +4,7 @@ import commands.Administration.restart;
 import commands.Administration.shutdown;
 import commands.Command;
 import commands.chat.getLvl;
+import commands.chat.info;
 import commands.chat.say;
 import commands.essentials.github;
 import commands.essentials.guildstart;
@@ -12,6 +13,7 @@ import commands.essentials.settings;
 import commands.etc.SpeedTest;
 import commands.etc.gif;
 import commands.etc.lmgtfy;
+import commands.etc.uptime;
 import commands.music.Music;
 import listeners.*;
 import net.dv8tion.jda.core.AccountType;
@@ -87,6 +89,8 @@ public class Main {
         commands.put("gif", new gif());
         commands.put("lmgtfy", new lmgtfy());
         commands.put("settings", new settings());
+        commands.put("info", new info());
+        commands.put("uptime", new uptime());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
@@ -98,6 +102,7 @@ public class Main {
         builder.addEventListener(new writecomment());
         builder.addEventListener(new Usercreate());
         builder.addEventListener(new leveler());
+        builder.addEventListener(new reconnectlistener());
 
     }
     public static void handleCommand(commandParser.CommandContainer cmd) throws ParseException, IOException {

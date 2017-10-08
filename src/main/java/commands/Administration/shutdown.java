@@ -54,11 +54,12 @@ public class shutdown implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("stop", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -shutdown";
+        return "USAGE: -stop";
     }
 
     @Override

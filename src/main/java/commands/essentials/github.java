@@ -1,6 +1,7 @@
 package commands.essentials;
 
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import util.*;
 
@@ -34,6 +35,7 @@ public class github implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("github", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

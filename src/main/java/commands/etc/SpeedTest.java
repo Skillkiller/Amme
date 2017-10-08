@@ -1,6 +1,7 @@
 package commands.etc;
 
 import commands.Command;
+import core.CoreCommands;
 import fr.bmartel.speedtest.SpeedTestReport;
 import fr.bmartel.speedtest.SpeedTestSocket;
 import fr.bmartel.speedtest.inter.ISpeedTestListener;
@@ -86,6 +87,7 @@ public class SpeedTest implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("speedtest", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

@@ -1,6 +1,7 @@
 package commands.essentials;
 
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import util.Logger;
@@ -42,6 +43,7 @@ public class guildstart implements Command{
             event.getTextChannel().sendMessage("System Online!").queue();
         }
         Logger.logCommand("startup", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

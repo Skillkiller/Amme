@@ -1,6 +1,7 @@
 package commands.essentials;
 
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.entities.Channel;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.MessageChannel;
@@ -58,6 +59,7 @@ public class settings implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("settings", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override

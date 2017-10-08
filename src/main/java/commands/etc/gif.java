@@ -4,6 +4,7 @@ import at.mukprojects.giphy4j.Giphy;
 import at.mukprojects.giphy4j.entity.search.SearchFeed;
 import at.mukprojects.giphy4j.exception.GiphyException;
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.entities.MessageChannel;
@@ -80,6 +81,7 @@ public class gif implements Command{
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
         Logger.logCommand("gif", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
     }
 
     @Override
