@@ -41,7 +41,7 @@ public class SQL {
     public static boolean ifGuildExists(Guild guild){
 
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM schlaubibot WHERE serverid = ?");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM guild WHERE serverid = ?");
             ps.setString(1, guild.getId());
             ResultSet rs = ps.executeQuery();
             return rs.next();
@@ -53,7 +53,7 @@ public class SQL {
 
     public static void createServer(Guild guild){
         try{
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `schlaubibot`(`ownerid`, `serverid`, `msg`) VALUES ( ?, ?, 1)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`ownerid`, `serverid`, `msg`) VALUES ( ?, ?, 1)");
             ps.setString(1, guild.getOwner().getUser().getId());
             ps.setString(2, guild.getId());
             ps.execute();
@@ -66,7 +66,7 @@ public class SQL {
         if(!ifGuildExists(guild))
             createServer(guild);
         try{
-            PreparedStatement ps = connection.prepareStatement("UPDATE schlaubibot SET " + type + " = '" + value + "' WHERE serverid = " + guild.getId());
+            PreparedStatement ps = connection.prepareStatement("UPDATE guild SET " + type + " = '" + value + "' WHERE serverid = " + guild.getId());
             ps.execute();
         } catch (SQLException e){
             e.printStackTrace();
@@ -75,7 +75,7 @@ public class SQL {
 
     public static String getValue(Guild guild, String type){
         try{
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM schlaubibot WHERE `serverid` = ?");
+            PreparedStatement ps = connection.prepareStatement("SELECT * FROM guild WHERE `serverid` = ?");
             ps.setString(1, guild.getId());
             ResultSet rs = ps.executeQuery();
             while (rs.next()){

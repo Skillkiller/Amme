@@ -3,6 +3,7 @@ package core;
 import commands.Administration.restart;
 import commands.Administration.shutdown;
 import commands.Command;
+import commands.chat.fail;
 import commands.chat.getLvl;
 import commands.chat.info;
 import commands.chat.say;
@@ -10,10 +11,7 @@ import commands.essentials.github;
 import commands.essentials.guildstart;
 import commands.essentials.help;
 import commands.essentials.settings;
-import commands.etc.SpeedTest;
-import commands.etc.gif;
-import commands.etc.lmgtfy;
-import commands.etc.uptime;
+import commands.etc.*;
 import commands.music.Music;
 import listeners.*;
 import net.dv8tion.jda.core.AccountType;
@@ -59,7 +57,8 @@ public class Main {
                 .setAudioEnabled(true)
                 .setAutoReconnect(true)
                 .setStatus(STATICS.STATUS)
-                .setGame(Game.of(STATICS.CUSTOM_MESSAGE + " | *help | coded by Lee", "http://twitch.tv/lordleeyt"));
+                .setGame(Game.of(STATICS.CUSTOM_MESSAGE + " | *help | coded by Lee", "http://twitch.tv/lordleeyt"))
+                ;
 
         initializeListeners();
         initializeCommands();
@@ -91,6 +90,8 @@ public class Main {
         commands.put("settings", new settings());
         commands.put("info", new info());
         commands.put("uptime", new uptime());
+        commands.put("fail", new fail());
+        commands.put("short", new shorter());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());

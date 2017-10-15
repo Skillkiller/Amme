@@ -34,7 +34,7 @@ public class shutdown implements Command{
     @Override
     public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
         if (event.getGuild().getOwner().getUser().getId().equals("221905671296253953")) {
-        if (core.permissionHandler.check(2, event)) return;
+        if (core.permissionHandler.check(1, event)) return;
         }else if (core.permissionHandler.check(4, event)) return;
         event.getMessage().delete().queue();
         event.getTextChannel().sendMessage(":battery: System going down!").queue();

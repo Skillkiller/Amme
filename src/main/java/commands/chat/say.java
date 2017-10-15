@@ -34,6 +34,8 @@ public class say implements Command{
         String serverID = event.getGuild().getId();
         String channel = event.getTextChannel().getName();
 
+
+
         event.getMessage().delete().queue();
 
         String output = "";

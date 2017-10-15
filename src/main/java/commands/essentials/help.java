@@ -78,8 +78,7 @@ public class help implements Command {
 
             PrivateChannel pc = event.getAuthor().openPrivateChannel().complete();
             pc.sendMessage(":clipboard:  __**COMMAND LIST**__  :clipboard: \n\n" +
-                    "If you want a full list of commands with description, please take a look there:\n" +
-                    ":point_right:   **http://zekrosbot.zekro.de**\n\n" +
+                    "Dreißt kopiert von https://github.com/zekroTJA\n" +
                     "***Legend:***\n" +
                     "  :1234:  -  Usable for everyone\n" +
                     "  :one:  -  Only for groups `" + Arrays.toString(STATICS.PERMS).replace("[", "").replace("]", "") + "`\n" +

@@ -27,7 +27,7 @@ public class writecomment extends ListenerAdapter{
         if (event.getMessage().getMentionedUsers().size() < 1) return;
         Guild g = event.getGuild();
         User user = event.getMessage().getMentionedUsers().get(0);
-        OnlineStatus us = event.getGuild().getMember(user).getOnlineStatus();
+        String us = event.getGuild().getMember(user).getOnlineStatus().toString();
         if (event.getMessage().getMentionedUsers().size() < 1) return;
         if (event.getAuthor().isBot()) return;
         if (SQL.getValue(g, "msg").equals("0")) return;

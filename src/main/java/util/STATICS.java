@@ -19,7 +19,7 @@ import java.util.Date;
 public class STATICS {
 
 
-    public static OnlineStatus STATUS = OnlineStatus.ONLINE;
+    public static OnlineStatus STATUS = OnlineStatus.IDLE;
 
     public static String CUSTOM_MESSAGE = "アメリ";
 
@@ -36,6 +36,8 @@ public class STATICS {
     public static int reconnectCount = 0;
 
     public static Date lastRestart;
+
+    public static final String BITLYUSERNAME = SECRETS.bitlyuser;
 
     public class CMDTYPE {
         public static final String administration = "Administration";
