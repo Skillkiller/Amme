@@ -2,10 +2,14 @@ package commands.chat;
 
 import commands.Command;
 import core.CoreCommands;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.EmbedBuilder;
+import net.dv8tion.jda.core.entities.TextChannel;
+import net.dv8tion.jda.core.entities.User;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.STATICS;
 
+import java.awt.*;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -23,46 +27,43 @@ import java.text.ParseException;
  */
 public class say implements Command{
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
-        if (core.permissionHandler.check(2, event)) return;
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
+        if (core.permissionHandler.check(4, event)) return;
 
-        String serverID = event.getGuild().getId();
-        String channel = event.getTextChannel().getName();
+        String message = String.join(" ", args).split("@")[0];
+        User memb = event.getMessage().getMentionedUsers().size() > 0 ?  event.getMessage().getMentionedUsers().get(0) : null;
+        User author = event.getAuthor();
+        TextChannel chan = event.getChannel();
 
-
-
+        if (args.length < 2 || memb == null) {
+            chan.sendMessage(new EmbedBuilder().setColor(Color.red).setDescription(help()).build()).queue();
+            return;
+        }
         event.getMessage().delete().queue();
 
-        String output = "";
-        if (args.length > 0) {
-            for (String e : args) {
-                output += e + " ";
-            }
-        }
-
-        event.getTextChannel().sendMessage(":speech_balloon:    " + output).queue();
+        memb.openPrivateChannel().queue(pc -> pc.sendMessage(message.substring(0, message.length() - 1)).queue());
     }
 
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
-        Logger.logCommand("say", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
+        Logger.logCommand("psay", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -say [MESSAGE]";
+        return "USAGE: *psay [MESSAGE] [User] ";
     }
 
     @Override
     public String description() {
-        return "Be the Bot!";
+        return "Send a private message trough the bot!";
     }
 
     @Override

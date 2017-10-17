@@ -3,7 +3,7 @@ package commands.etc;
 import commands.Command;
 import core.CoreCommands;
 import net.dv8tion.jda.core.entities.*;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.STATICS;
 import util.embedSender;
@@ -25,12 +25,12 @@ import java.text.ParseException;
  */
 public class lmgtfy implements Command{
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         Message message = event.getMessage();
         MessageChannel channel = event.getChannel();
         message.delete().queue();
@@ -46,14 +46,14 @@ public class lmgtfy implements Command{
         }}
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
         Logger.logCommand("lmgtfy", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -lmgtfy <SEARCH QUERRY>";
+        return "USAGE: *lmgtfy <SEARCH QUERRY>";
 
     }
 

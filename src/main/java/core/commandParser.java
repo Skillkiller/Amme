@@ -1,6 +1,7 @@
 package core;
 
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.STATICS;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  */
 public class commandParser {
 
-   public CommandContainer parse(String rw, MessageReceivedEvent e) {
+   public CommandContainer parse(String rw, GuildMessageReceivedEvent e) {
 
       ArrayList<String> split = new ArrayList<>();
 
@@ -45,9 +46,9 @@ public class commandParser {
       public final String[] splitBeheaded;
       public final String invoke;
       public final String[] args;
-      public final MessageReceivedEvent event;
+      public final GuildMessageReceivedEvent event;
 
-      public CommandContainer(String rw, String beheaded, String[] splitBeheaded, String invoke, String[] args, MessageReceivedEvent e) {
+      public CommandContainer(String rw, String beheaded, String[] splitBeheaded, String invoke, String[] args, GuildMessageReceivedEvent e) {
          this.raw = rw;
          this.beheaded = beheaded;
          this.splitBeheaded = splitBeheaded;

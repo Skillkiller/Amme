@@ -1,8 +1,8 @@
 package core;
 
-import commands.Administration.restart;
+import commands.*;
 import commands.Administration.shutdown;
-import commands.Command;
+import commands.GuildAdmin.kick;
 import commands.chat.fail;
 import commands.chat.getLvl;
 import commands.chat.info;
@@ -79,9 +79,8 @@ public class Main {
         commands.put("m", new Music());
         commands.put("help", new help());
         commands.put("stop", new shutdown());
-        commands.put("restart", new restart());
         commands.put("speedtest", new SpeedTest());
-        commands.put("say", new say());
+        commands.put("psay", new say());
         commands.put("startup", new guildstart());
         commands.put("rank", new getLvl());
         commands.put("github", new github());
@@ -92,6 +91,8 @@ public class Main {
         commands.put("uptime", new uptime());
         commands.put("fail", new fail());
         commands.put("short", new shorter());
+        commands.put("kick", new kick());
+        commands.put("ping", new ping());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
@@ -106,21 +107,19 @@ public class Main {
         builder.addEventListener(new reconnectlistener());
 
     }
-    public static void handleCommand(commandParser.CommandContainer cmd) throws ParseException, IOException {
+    public static void handleCommand(commandParser.CommandContainer cmd) throws IOException, ParseException {
 
-        if (commands.containsKey(cmd.invoke)) {
+        if (commands.containsKey(cmd.invoke.toLowerCase())) {
 
-            boolean safe = commands.get(cmd.invoke).called(cmd.args, cmd.event);
+            boolean safe = commands.get(cmd.invoke.toLowerCase()).called(cmd.args, cmd.event);
 
             if (!safe) {
-                commands.get(cmd.invoke).action(cmd.args, cmd.event);
-                commands.get(cmd.invoke).executed(safe, cmd.event);
+                commands.get(cmd.invoke.toLowerCase()).action(cmd.args, cmd.event);
+                commands.get(cmd.invoke.toLowerCase()).executed(safe, cmd.event);
             } else {
-                commands.get(cmd.invoke).executed(safe, cmd.event);
+                commands.get(cmd.invoke.toLowerCase()).executed(safe, cmd.event);
             }
 
-        }
-    }
 
 
-}
+        }}}

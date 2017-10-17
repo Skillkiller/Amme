@@ -18,20 +18,27 @@ import java.util.Date;
  */
 public class STATICS {
 
+    public static String PORT = "3306";
 
-    public static OnlineStatus STATUS = OnlineStatus.IDLE;
+    public static String HOST = SECRETS.HOST;
+
+    public static String DATABASE = "Discord";
+
+    public static  String USERNAME = SECRETS.USERNAME;
+
+    public static OnlineStatus STATUS = OnlineStatus.ONLINE;
 
     public static String CUSTOM_MESSAGE = "アメリ";
 
     public static final String[] FULLPERMS = {"Administrator", "Admin", "Moderator", "Supporter"};
 
-    public static final String[] PERMS = {"Bot Owner", "Tuhle Typen", ""};
+    public static final String[] PERMS = {"Bot Owner", "Tuhle Typen"};
 
     public static String PREFIX = "*";
 
     public static String input;
 
-    public static int music_volume = 0;
+    public static int music_volume = 10;
 
     public static int reconnectCount = 0;
 
@@ -47,6 +54,8 @@ public class STATICS {
         public static final String music = "Music";
         public static final String guildadmin = "Guild Administration";
     }
+
+
 
 
 }

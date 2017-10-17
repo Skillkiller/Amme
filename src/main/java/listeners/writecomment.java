@@ -25,13 +25,19 @@ import static net.dv8tion.jda.core.OnlineStatus.ONLINE;
 public class writecomment extends ListenerAdapter{
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         if (event.getMessage().getMentionedUsers().size() < 1) return;
+            if (event.getMessage().getMentionedUsers().get(0).equals(event.getJDA().getSelfUser())) {
+                if (!SQL.ifGuildExists(event.getGuild())) {SQL.createServer(event.getGuild());}
+                event.getChannel().sendMessage("Try **" + SQL.getValue(event.getGuild(), "prefix") + "help** for Help.").queue();
+            }
+        if (event.getAuthor().isBot()) return;
+        if (event.getAuthor().equals(event.getJDA().getSelfUser())) return;
+
         Guild g = event.getGuild();
         User user = event.getMessage().getMentionedUsers().get(0);
         String us = event.getGuild().getMember(user).getOnlineStatus().toString();
         if (event.getMessage().getMentionedUsers().size() < 1) return;
-        if (event.getAuthor().isBot()) return;
         if (SQL.getValue(g, "msg").equals("0")) return;
-        if (!us.equals(ONLINE)){
+        if (!us.equals("ONLINE")){
             Message msg = event.getChannel().sendMessage("Hey, " + event.getAuthor().getAsMention() + " " + event.getMessage().getMentionedUsers().get(0).getAsMention() + " is " + us + " you can wait long to get an Answer!").complete();
             try {
                 Thread.sleep(10000);
@@ -39,6 +45,6 @@ public class writecomment extends ListenerAdapter{
                 e.printStackTrace();
             }
             msg.delete().queue();
-        }
+        }else return;
     }
 }

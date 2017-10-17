@@ -1,8 +1,10 @@
 package listeners;
 
+import core.Main;
 import net.dv8tion.jda.core.entities.PrivateChannel;
 import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import util.SQL;
 
 /**
  * Butler´s JDA BOT
@@ -18,20 +20,29 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
  */
 public class guildJoin extends ListenerAdapter{
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
-        if(event.getGuild().getOwner().getUser().getId().equals("221905671296253953")) return;
-        try {
-            event.getGuild().getController().addRolesToMember(event.getMember(), event.getGuild().getRolesByName("Member", true)).queue();
-        }catch (Exception e) {
-            e.printStackTrace();
-           PrivateChannel ow = event.getGuild().getOwner().getUser().openPrivateChannel().complete();
-           ow.sendMessage("Please create a role with the name Member!").queue();
-        }
         PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
-        pc.sendMessage(
-                "**Hey,** " + event.getMember().getAsMention() + " **and welcome on " + event.getGuild().getName() + " :wave:\n\n" +
-                        "You automatically got assigned the server role Member" +  "` by me.\n\n" +
-                        "Now, have a nice day and a lot of fun on the server! ;)"
-        ).queue();
+        if(SQL.getValue(event.getGuild(), "autorole").equals("0")) {
+            pc.sendMessage(
+                    "**Hey,** " + event.getMember().getAsMention() + " and welcome on " + event.getGuild().getName() + " :wave:\n\n" +
+                            "Now, have a nice day and a lot of fun on the server! ;)"
+            ).queue();
+
+
+        }else {
+            try {
+                event.getGuild().getController().addRolesToMember(event.getMember(), event.getGuild().getRolesByName(SQL.getValue(event.getGuild(), "autorole"), true)).queue();
+                pc.sendMessage(
+                        "**Hey,** " + event.getMember().getAsMention() + " and welcome on " + event.getGuild().getName() + " :wave:\n\n" +
+                                "You automatically got the Role `" + SQL.getValue(event.getGuild(), "autorole") + "` \n" +
+                                "Now, have a nice day and a lot of fun on the server! ;)"
+                ).queue();
+            } catch (Exception e) {
+                e.printStackTrace();
+                PrivateChannel ow = event.getGuild().getOwner().getUser().openPrivateChannel().complete();
+                ow.sendMessage("Please enter a valid Autorole Role!").queue();
+                ow.sendMessage(Main.commands.get("settings").help() + "\n Only in Guild do not send commands at PM!");
+            }
+        }
     }
 
 }

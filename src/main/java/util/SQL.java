@@ -1,6 +1,7 @@
 package util;
 
 import net.dv8tion.jda.core.entities.Guild;
+import net.dv8tion.jda.core.entities.User;
 
 import java.sql.*;
 
@@ -24,7 +25,7 @@ public class SQL {
             try{
 
 
-                connection = DriverManager.getConnection("jdbc:sqlite:lvl.sqlite");
+                connection = DriverManager.getConnection("jdbc:sqlite:guild.sqlite");
                 System.out.println("[Amme] GuildLogger Online");
 
             } catch (SQLException e) {
@@ -38,35 +39,42 @@ public class SQL {
         return (connection != null);
     }
 
-    public static boolean ifGuildExists(Guild guild){
 
+    public static boolean ifGuildExists(Guild guild){
         try {
+            if(connection.isClosed())
+                connect();
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM guild WHERE serverid = ?");
-            ps.setString(1, guild.getId());
+            ps.setString(1, String.valueOf(guild.getIdLong()));
             ResultSet rs = ps.executeQuery();
             return rs.next();
-        } catch (SQLException e) {
+        } catch (SQLException | NullPointerException e) {
             e.printStackTrace();
         }
         return  false;
     }
 
-    public static void createServer(Guild guild){
+    public static void updateValue(Guild guild, String type, String value){
         try{
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`ownerid`, `serverid`, `msg`) VALUES ( ?, ?, 1)");
-            ps.setString(1, guild.getOwner().getUser().getId());
-            ps.setString(2, guild.getId());
+            if(connection.isClosed())
+                connect();
+            if(!ifGuildExists(guild))
+                createServer(guild);
+            PreparedStatement ps = connection.prepareStatement("UPDATE guild SET " + type + " = '" + value + "' WHERE serverid = " + guild.getId());
             ps.execute();
         } catch (SQLException e){
             e.printStackTrace();
         }
     }
 
-    public static void updateValue(Guild guild, String type, String value){
-        if(!ifGuildExists(guild))
-            createServer(guild);
+
+    public static void createServer(Guild guild){
         try{
-            PreparedStatement ps = connection.prepareStatement("UPDATE guild SET " + type + " = '" + value + "' WHERE serverid = " + guild.getId());
+            if(connection.isClosed())
+                connect();
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`, `prefix`, `logchannel`, `msg`, `autorole`) VALUES (?, ?, 0, 1, 0)");
+            ps.setString(1, String.valueOf(guild.getIdLong()));
+            ps.setString(2, STATICS.PREFIX);
             ps.execute();
         } catch (SQLException e){
             e.printStackTrace();
@@ -75,6 +83,8 @@ public class SQL {
 
     public static String getValue(Guild guild, String type){
         try{
+            if(connection.isClosed())
+                connect();
             PreparedStatement ps = connection.prepareStatement("SELECT * FROM guild WHERE `serverid` = ?");
             ps.setString(1, guild.getId());
             ResultSet rs = ps.executeQuery();

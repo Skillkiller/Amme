@@ -8,7 +8,7 @@ import fr.bmartel.speedtest.inter.ISpeedTestListener;
 import fr.bmartel.speedtest.model.SpeedTestError;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Message;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.STATICS;
 
@@ -30,17 +30,17 @@ import java.text.ParseException;
  */
 public class SpeedTest implements Command{
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         SpeedTestSocket Dspeed = new SpeedTestSocket();
         SpeedTestSocket Uspeed = new SpeedTestSocket();
         StringBuilder sb = new StringBuilder();
         event.getMessage().delete().queue();
-        Message msg = event.getTextChannel().sendMessage(new EmbedBuilder().setDescription("**Speed test starting...**\n\nTesting downstream...").build()).complete();
+        Message msg = event.getChannel().sendMessage(new EmbedBuilder().setDescription("**Speed test starting...**\n\nTesting downstream...").build()).complete();
 
         Dspeed.addSpeedTestListener(new ISpeedTestListener() {
             @Override
@@ -85,14 +85,14 @@ public class SpeedTest implements Command{
     }
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
         Logger.logCommand("speedtest", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -speedtest";
+        return "USAGE: *speedtest";
     }
 
     @Override

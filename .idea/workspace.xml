@@ -6,9 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4e53492-1b90-40d4-ac17-a9464299065d" name="Default" comment="Big Changes:&#10;&#10;    -Clean Code&#10;    -Fixed some little Bugs&#10;    -Added short command">
+    <list default="true" id="f4e53492-1b90-40d4-ac17-a9464299065d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Amaya/.gitignore" afterPath="$PROJECT_DIR$/../Amaya/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/.idea/artifacts/Amaya_jar.xml" afterPath="$PROJECT_DIR$/../Amaya/.idea/artifacts/Amaya_jar.xml" />
       <change beforePath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/Amaya.iml" afterPath="$PROJECT_DIR$/../Amaya/Amaya.iml" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/lvl.sqlite" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/points.sqlite" afterPath="$PROJECT_DIR$/../Amaya/points.sqlite" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/restart.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/restart.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Command.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Command.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/core/commandParser.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/core/commandParser.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" />
+      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../Amaya/out/" />
     <ignored path="$PROJECT_DIR$/../Amaya/target/" />
@@ -30,29 +58,28 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+            <state relative-caret-position="238">
+              <caret line="83" column="42" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java">
+      <file leaf-file-name="guildstart.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="80" column="67" lean-forward="false" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Amaya/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="82" column="19" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="395">
+              <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+              <folding>
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1720#1721#0" expanded="true" />
+                <element signature="e#1769#1770#0" expanded="true" />
+                <element signature="e#1832#1833#0" expanded="true" />
+                <element signature="e#1881#1882#0" expanded="true" />
+                <element signature="e#1930#1931#0" expanded="true" />
+                <element signature="e#1975#1976#0" expanded="true" />
+                <element signature="e#1999#2000#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,6 +106,7 @@
       <find>status</find>
       <find>ongu</find>
       <find>ongui</find>
+      <find>vol</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,57 +125,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/commandHandler.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/audioCore/AudioInfo.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/audioCore/PlayerSendHandler.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Music.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Command.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/commandParser.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/CoreCommands.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/embedSender.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/help.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/privateMessage.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/audioCore/TrackManager.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/userstatus.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/Loader.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/lvl.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/Usercreate.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/LVL.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/reconnectlistener.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/readyListener.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/leveler.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Cooldown.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/uptime.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/restart.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/info.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/test.java" />
         <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/test.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" />
         <option value="$PROJECT_DIR$/../Amaya/pom.xml" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/fail.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/SECRETS.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/shorter.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Achivment.java" />
-        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" />
         <option value="$PROJECT_DIR$/../Amaya/.gitignore" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Achivment.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/SECRETS.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/commandParser.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/GuildAdmin/kick.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/fail.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/info.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/uptime.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/shorter.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/ping.java" />
+        <option value="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" />
       </list>
     </option>
   </component>
@@ -168,8 +196,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="369" />
-    <option name="y" value="-8" />
+    <option name="x" value="-64" />
+    <option name="y" value="44" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
@@ -205,8 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,13 +255,6 @@
             <path>
               <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
               <item name="Amaya" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="Amaya_jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amaya" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -257,15 +277,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amaya" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="Administration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
@@ -283,7 +294,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="essentials" type="462c0819:PsiDirectoryNode" />
+              <item name="etc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
@@ -292,7 +303,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="etc" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
@@ -302,27 +313,20 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="listeners" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Amaya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Amaya" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Amaya/src/main/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java&#10;D:/Amaya/src/main/java/util/SECRETS.java" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -490,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508062107552</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Big Changes:&#10;&#10;    -Clean Code&#10;    -Fixed some little Bugs&#10;    -Added short command">
+      <created>1508062336224</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508062336224</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -514,12 +525,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28827587" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38688946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43573266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -533,6 +544,34 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41838047" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -550,77 +589,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="20" column="94" lean-forward="true" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/embedSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/3.3.1_284/JDA-3.3.1_284-sources.jar!/net/dv8tion/jda/core/hooks/ListenerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" lean-forward="false" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/dependency-reduced-pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/Amaya.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/3.3.1_284/JDA-3.3.1_284-sources.jar!/net/dv8tion/jda/core/EmbedBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="534" column="24" lean-forward="false" selection-start-line="534" selection-start-column="24" selection-end-line="534" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/lvl.sqlite">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/reconnectlistener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/readyListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -628,96 +596,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/restart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/restart.py" />
     <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/3.3.1_284/JDA-3.3.1_284-sources.jar!/net/dv8tion/jda/core/entities/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="105" column="14" lean-forward="true" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="83" column="274" lean-forward="false" selection-start-line="83" selection-start-column="274" selection-end-line="83" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="50" column="274" lean-forward="false" selection-start-line="50" selection-start-column="274" selection-end-line="50" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="89" column="274" lean-forward="false" selection-start-line="89" selection-start-column="274" selection-end-line="89" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="40" column="86" lean-forward="false" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/uptime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="67" column="274" lean-forward="false" selection-start-line="67" selection-start-column="274" selection-end-line="67" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="705" column="135" lean-forward="false" selection-start-line="705" selection-start-column="135" selection-end-line="705" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="37" column="274" lean-forward="false" selection-start-line="37" selection-start-column="274" selection-end-line="37" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="45" column="274" lean-forward="false" selection-start-line="45" selection-start-column="274" selection-end-line="45" selection-end-column="274" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="42" column="274" lean-forward="false" selection-start-line="42" selection-start-column="274" selection-end-line="42" selection-end-column="274" />
         </state>
       </provider>
     </entry>
@@ -735,48 +618,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/3.3.1_287/JDA-3.3.1_287.jar!/net/dv8tion/jda/core/entities/Guild.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="49" column="274" lean-forward="false" selection-start-line="49" selection-start-column="274" selection-end-line="49" selection-end-column="274" />
-          <folding>
-            <element signature="e#2135#2136#0" expanded="false" />
-            <element signature="e#2172#2173#0" expanded="false" />
-            <element signature="e#2221#2222#0" expanded="false" />
-            <element signature="e#2266#2267#0" expanded="false" />
-            <element signature="e#2315#2316#0" expanded="false" />
-            <element signature="e#2363#2364#0" expanded="false" />
-            <element signature="e#2408#2409#0" expanded="false" />
-            <element signature="e#2432#2433#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="88" lean-forward="false" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
         </state>
       </provider>
     </entry>
@@ -787,101 +632,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/restart.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/restart.java" />
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/Cooldown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="31" column="8" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="302">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="75" column="25" lean-forward="false" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/LVL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
-          <folding />
+        <state relative-caret-position="341">
+          <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/SECRETS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="216">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/net/dv8tion/JDA/3.3.1_289/JDA-3.3.1_289-sources.jar!/net/dv8tion/jda/core/hooks/ListenerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="140" column="71" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/commandListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="46" column="81" lean-forward="false" selection-start-line="46" selection-start-column="81" selection-end-line="46" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/permissionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/CoreCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/commandParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="39" column="65" lean-forward="false" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-          <folding />
+        <state relative-caret-position="409">
+          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/Cooldown.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="e#546#547#0" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/leveler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="72" column="44" lean-forward="false" selection-start-line="72" selection-start-column="44" selection-end-line="72" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/userstatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -889,72 +701,296 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/reconnectlistener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/privateMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/Achivment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="272">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="34" column="75" lean-forward="true" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/readyListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/LVL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/embedSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/leveler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="26" column="34" lean-forward="false" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/userstatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="77" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="367" column="30" lean-forward="false" selection-start-line="367" selection-start-column="30" selection-end-line="367" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/fail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="65" column="42" lean-forward="false" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/overflowListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="35" lean-forward="false" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="88" column="43" lean-forward="false" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/listeners/writecomment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="28" column="92" lean-forward="false" selection-start-line="28" selection-start-column="92" selection-end-line="28" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/GuildAdmin/kick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-353">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#730#731#0" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="e#2504#2505#0" expanded="false" />
+            <element signature="e#2557#2558#0" expanded="false" />
+            <element signature="e#2606#2607#0" expanded="false" />
+            <element signature="e#2660#2661#0" expanded="false" />
+            <element signature="e#2709#2710#0" expanded="false" />
+            <element signature="e#2758#2759#0" expanded="false" />
+            <element signature="e#2803#2804#0" expanded="false" />
+            <element signature="e#2827#2828#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/shorter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#797#798#0" expanded="false" />
-            <element signature="e#825#826#0" expanded="false" />
-            <element signature="e#2161#2162#0" expanded="false" />
-            <element signature="e#2210#2211#0" expanded="false" />
-            <element signature="e#2252#2253#0" expanded="false" />
-            <element signature="e#2296#2297#0" expanded="false" />
-            <element signature="e#2345#2346#0" expanded="false" />
-            <element signature="e#2393#2394#0" expanded="false" />
-            <element signature="e#2442#2443#0" expanded="false" />
-            <element signature="e#2484#2485#0" expanded="false" />
-            <element signature="e#2529#2530#0" expanded="false" />
-            <element signature="e#2553#2554#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="412">
+          <caret line="67" column="24" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/fail.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/uptime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="-404">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-710">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="55" column="24" lean-forward="false" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/ping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="56" column="36" lean-forward="true" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
           <folding>
-            <element signature="e#1153#1154#0" expanded="false" />
-            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#695#696#0" expanded="false" />
+            <element signature="e#1090#1091#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#2662#2663#0" expanded="false" />
+            <element signature="e#2699#2700#0" expanded="false" />
+            <element signature="e#2748#2749#0" expanded="false" />
+            <element signature="e#2778#2779#0" expanded="false" />
+            <element signature="e#2827#2828#0" expanded="false" />
+            <element signature="e#2869#2870#0" expanded="false" />
+            <element signature="e#2914#2915#0" expanded="false" />
+            <element signature="e#2938#2939#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        <state relative-caret-position="238">
+          <caret line="83" column="42" lean-forward="false" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java">
+    <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="80" column="67" lean-forward="false" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Amaya/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="82" column="19" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="395">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding>
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1720#1721#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1832#1833#0" expanded="true" />
+            <element signature="e#1881#1882#0" expanded="true" />
+            <element signature="e#1930#1931#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
+            <element signature="e#1999#2000#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -3,7 +3,7 @@ package commands.essentials;
 import commands.Command;
 import core.CoreCommands;
 import net.dv8tion.jda.core.entities.Guild;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.SQL;
 import util.STATICS;
@@ -25,35 +25,39 @@ import java.text.ParseException;
  */
 public class guildstart implements Command{
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         if (core.permissionHandler.check(3, event)) return;
-    }
-
-    @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
         Guild g = event.getGuild();
         if(!SQL.ifGuildExists(g)) {
             SQL.createServer(g);
             System.out.println("[Amme]System started on: " + g.getName());
-            event.getTextChannel().sendMessage("System Online!").queue();
+            event.getChannel().sendMessage("System Online!").queue();
+        }else {
+            SQL.createServer(g);
+            event.getChannel().sendMessage("System Reset!").queue();
         }
+    }
+
+    @Override
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
+
         Logger.logCommand("startup", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE:-startup";
+        return "USAGE: *startup";
     }
 
     @Override
     public String description() {
-        return "Start the System. Only once";
+        return "Start the System. (RESET THE SETTINGS)";
     }
 
     @Override

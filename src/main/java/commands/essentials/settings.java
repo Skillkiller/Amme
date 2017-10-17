@@ -2,10 +2,9 @@ package commands.essentials;
 
 import commands.Command;
 import core.CoreCommands;
-import net.dv8tion.jda.core.entities.Channel;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.MessageChannel;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.SQL;
 import util.STATICS;
@@ -28,14 +27,14 @@ import java.text.ParseException;
  */
 public class settings implements Command{
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         Guild guild = event.getGuild();
-        MessageChannel channel = event.getTextChannel();
+        MessageChannel channel = event.getChannel();
         if (core.permissionHandler.check(3, event)) return;
         switch (args[0]) {
             case "msg":
@@ -51,20 +50,48 @@ public class settings implements Command{
                     }
 
                 }
+                break;
 
-
+            case "prefix":
+                if (args.length < 2) {
+                    event.getChannel().sendMessage(help());
+                    return;
+                }
+                SQL.updateValue(guild, "prefix", args[1]);
+                embedSender.sendEmbed(":white_check_mark: Succesfully set the Prefix!", channel, Color.green);
+                break;
+            case "logchannel":
+                if (args.length < 2) {
+                    event.getChannel().sendMessage(help() + "\n(CHANNEL MUST BE A ID)");
+                    return;
+                }
+                SQL.updateValue(guild, "logchannel", args[1]);
+                embedSender.sendEmbed(":white_check_mark: Succesfully set the LogChannel!", channel, Color.green);
+                break;
+            case "autorole":
+                if (args.length < 2) {
+                    event.getChannel().sendMessage(help() + "\n(watch for large and lower case\n)");
+                    return;
+                }
+                SQL.updateValue(guild, "autorole", args[1]);
+                embedSender.sendEmbed(":white_check_mark: Succesfully set the Autorole!", channel, Color.green);
+                break;
         }
     }
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
         Logger.logCommand("settings", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -settings <VALUES>";
+        return "USAGE:\n" +
+                "*settings autorole <ROLENAME> (Set the Autorole at UserJoin | 0 for no Role.)\n" +
+                "*settings logchat <IDOFCHANNEL> (Set the logchannel | 0 for no Channel.)\n" +
+                "*settings prefix <NEWPREFIX> (Set the new Bot Prefix for this Guild)\n" +
+                "*settings msg <Toogle> (Enable/Disable Writecomment)\n";
     }
 
     @Override

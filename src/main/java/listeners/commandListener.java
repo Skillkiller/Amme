@@ -4,8 +4,11 @@ package listeners;
 import core.Main;
 import core.CoreCommands;
 import net.dv8tion.jda.core.entities.ChannelType;
+import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import util.SQL;
 import util.STATICS;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,6 +18,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 
+import static core.Main.handleCommand;
 import static sun.rmi.transport.TransportConstants.Ping;
 
 /**
@@ -32,24 +36,22 @@ import static sun.rmi.transport.TransportConstants.Ping;
 public class commandListener extends ListenerAdapter {
 
     @Override
-    public void onMessageReceived(MessageReceivedEvent e) {
-
-        if (e.getChannelType().equals(ChannelType.PRIVATE)) return;
-
-        if (e.getMessage().getContent().startsWith(STATICS.PREFIX) && e.getMessage().getAuthor().getId() != e.getJDA().getSelfUser().getId()) {
+    public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
+        Guild g = event.getGuild();
+        if (!SQL.ifGuildExists(g)){
+                SQL.createServer(g);
+        return;}
+        String prefix = SQL.getValue(g, "prefix");
+        if (event.getMessage().getContent().startsWith(prefix) && event.getMessage().getAuthor().getId() != event.getJDA().getSelfUser().getId()) {
             try {
-                Main.handleCommand(Main.parser.parse(e.getMessage().getContent(), e));
-                ArrayList<String> list = new ArrayList<>();
-                list.add(e.getGuild().getId());
-                list.add(CoreCommands.getCurrentSystemTime());
-                list.add(e.getMember().getEffectiveName());
-                list.add(e.getMessage().getContent());
-            } catch (ParseException e1) {
-                e1.printStackTrace();
-            } catch (IOException e1) {
-                e1.printStackTrace();
+                handleCommand(Main.parser.parse(event.getMessage().getContent(), event));
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
         }
+
     }
 
     }

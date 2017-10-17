@@ -5,8 +5,9 @@ import core.CoreCommands;
 import core.Main;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.PrivateChannel;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
+import util.SQL;
 import util.STATICS;
 
 import java.awt.*;
@@ -40,24 +41,24 @@ public class help implements Command {
         }
     }
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         if (args.length > 0) {
             if (Main.commands.containsKey(args[0]))
                 if (Main.commands.get(args[0]).help() != null)
-                    event.getTextChannel().sendMessage(
+                    event.getChannel().sendMessage(
                             eb.setColor(new Color(22, 138, 233)).setDescription(Main.commands.get(args[0]).help()).build()
                     ).queue();
                 else
-                    event.getTextChannel().sendMessage(
+                    event.getChannel().sendMessage(
                             eb.setColor(Color.red).setDescription(":warning:  There are currently no information for the command  *-" + args[0] + "* !").build()
                     ).queue();
             else
-                event.getTextChannel().sendMessage(
+                event.getChannel().sendMessage(
                         eb.setColor(Color.red).setDescription(":warning:  The command list does not contains information for the command *-" + args[0] + "* !").build()
                 ).queue();
             return;
@@ -70,7 +71,7 @@ public class help implements Command {
 
         StringBuilder ciams = new StringBuilder();
 
-        String[] ignorers = {"bpoll", "test", "r", "c", "bj", "ttt", "userinfo", "dev", "nudge", "poll", "moveall", "purge", "info", "suggestion", "r6", };
+        String[] ignorers = {};
         Arrays.stream(ignorers).forEach(s -> cmds.remove(s));
 
 
@@ -78,6 +79,7 @@ public class help implements Command {
 
             PrivateChannel pc = event.getAuthor().openPrivateChannel().complete();
             pc.sendMessage(":clipboard:  __**COMMAND LIST**__  :clipboard: \n\n" +
+                    "** If you nedd help to a special command do on a Guild whre the Bot is runnning on " + SQL.getValue(event.getGuild(), "prefix") + "help CommandName **\n" +
                     "Dreißt kopiert von https://github.com/zekroTJA\n" +
                     "***Legend:***\n" +
                     "  :1234:  -  Usable for everyone\n" +
@@ -147,9 +149,9 @@ public class help implements Command {
     }
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent e) {
+    public void executed(boolean success, GuildMessageReceivedEvent e) {
         Logger.logCommand("help", e);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + e.getMessage().getContent() + "' was executed by '" + e.getAuthor().getName() + "' (" + e.getGuild().getName() + ") in (" + e.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + e.getMessage().getContent() + "' was executed by '" + e.getAuthor().getName() + "' (" + e.getGuild().getName() + ") in (" + e.getChannel().getId() + ") ");
     }
 
     @Override

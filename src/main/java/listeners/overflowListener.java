@@ -20,17 +20,10 @@ import util.SQL;
  */
 public class overflowListener extends ListenerAdapter{
     public void onGuildJoin(GuildJoinEvent event) {
-        if (event.getJDA().getGuilds().size() > 25) {
-            PrivateChannel pc = event.getGuild().getOwner().getUser().openPrivateChannel().complete();
-            pc.sendMessage("Sorry but i am on over 25 Guilds so my Capacity is full! Maybe a other time!").queue();
-            event.getGuild().leave();
-            return;
-        }
         Guild g = event.getGuild();
-        if(!SQL.ifGuildExists(g)) {
             SQL.createServer(g);
             System.out.println("[Amme]System started on: " + g.getName());
-        }
+
 
 
     }

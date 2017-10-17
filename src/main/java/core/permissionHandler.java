@@ -2,10 +2,7 @@ package core;
 
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.Member;
-import net.dv8tion.jda.core.entities.Role;
-import net.dv8tion.jda.core.entities.TextChannel;
-import net.dv8tion.jda.core.entities.User;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.*;
 
 import java.awt.*;
@@ -39,9 +36,9 @@ public class permissionHandler {
         return 0;
     }
 
-    public static boolean check(int required, MessageReceivedEvent event) {
+    public static boolean check(int required, GuildMessageReceivedEvent event) {
         if (required > getLvl(event.getMember())) {
-            event.getTextChannel().sendMessage(new EmbedBuilder().setColor(Color.red).setDescription(
+            event.getChannel().sendMessage(new EmbedBuilder().setColor(Color.red).setDescription(
                     "Sorry but you need permission level `" + required + "` or above!\n(Your current permission level is `" + getLvl(event.getMember()) + "`)."
             ).build()).queue();
             return true;

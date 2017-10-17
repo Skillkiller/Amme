@@ -1,7 +1,7 @@
 package commands.Administration;
 
 import commands.Command;
-import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import util.Logger;
 import util.STATICS;
 import core.*;
@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Butler´s JDA BOT
@@ -27,17 +26,17 @@ public class shutdown implements Command{
 
 
     @Override
-    public boolean called(String[] args, MessageReceivedEvent event) {
+    public boolean called(String[] args, GuildMessageReceivedEvent event) {
         return false;
     }
 
     @Override
-    public void action(String[] args, MessageReceivedEvent event) throws ParseException, IOException {
+    public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
         if (event.getGuild().getOwner().getUser().getId().equals("221905671296253953")) {
         if (core.permissionHandler.check(1, event)) return;
         }else if (core.permissionHandler.check(4, event)) return;
         event.getMessage().delete().queue();
-        event.getTextChannel().sendMessage(":battery: System going down!").queue();
+        event.getChannel().sendMessage(":battery: System going down!").queue();
         try {
             Thread.sleep(7000);
         } catch (InterruptedException e) {
@@ -52,19 +51,19 @@ public class shutdown implements Command{
     }
 
     @Override
-    public void executed(boolean success, MessageReceivedEvent event) {
+    public void executed(boolean success, GuildMessageReceivedEvent event) {
         Logger.logCommand("stop", event);
-        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getTextChannel().getId() + ") ");
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
     }
 
     @Override
     public String help() {
-        return "USAGE: -stop";
+        return "USAGE: *stop";
     }
 
     @Override
     public String description() {
-        return "Emergency Shutdown";
+        return "Emergency Shutdown the Bot";
     }
 
     @Override

@@ -40,6 +40,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/mashape/unirest/unirest-java/1.4.9/unirest-java-1.4.9.jar" path-in-jar="/" />
       <element id="library" level="project" name="sqlite-jdbc-3.20.0" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/at/mukprojects/giphy4j/1.0.1/giphy4j-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/rosaloves/bitlyj/2.0.0/bitlyj-2.0.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
