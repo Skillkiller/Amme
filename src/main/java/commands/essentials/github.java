@@ -40,7 +40,7 @@ public class github implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *github";
+        return "USAGE: _github";
     }
 
     @Override

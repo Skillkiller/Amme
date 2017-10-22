@@ -58,7 +58,7 @@ public class say implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *psay [MESSAGE] [User] ";
+        return "USAGE: _psay [MESSAGE] [User] ";
     }
 
     @Override

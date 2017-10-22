@@ -86,7 +86,7 @@ public class gif implements Command{
 
     @Override
     public String help() {
-        return "USAGE: -gif <SEARCH QUERRY>";
+        return "USAGE: _gif <SEARCH QUERRY>";
     }
 
     @Override

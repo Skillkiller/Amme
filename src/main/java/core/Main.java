@@ -57,7 +57,7 @@ public class Main {
                 .setAudioEnabled(true)
                 .setAutoReconnect(true)
                 .setStatus(STATICS.STATUS)
-                .setGame(Game.of(STATICS.CUSTOM_MESSAGE + " | *help | coded by Lee", "http://twitch.tv/lordleeyt"))
+                .setGame(Game.of(STATICS.CUSTOM_MESSAGE + " | _help | coded by Lee", "http://twitch.tv/lordleeyt"))
                 ;
 
         initializeListeners();
@@ -93,6 +93,7 @@ public class Main {
         commands.put("short", new shorter());
         commands.put("kick", new kick());
         commands.put("ping", new ping());
+        commands.put("weather", new wheater());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());

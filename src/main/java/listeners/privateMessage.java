@@ -1,6 +1,7 @@
 package listeners;
 
 import core.CoreCommands;
+import net.dv8tion.jda.core.entities.PrivateChannel;
 import net.dv8tion.jda.core.events.message.priv.PrivateMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
@@ -20,7 +21,14 @@ public class privateMessage extends ListenerAdapter{
 
     public void onPrivateMessageReceived(PrivateMessageReceivedEvent event) {
         System.out.println(CoreCommands.getCurrentSystemTime() + " [PM] [" + event.getAuthor().getName() + "] " + event.getMessage().getContent());
-
+        if (event.getMessage().getContent().contains("Nudes")) {
+            PrivateChannel pc = event.getAuthor().openPrivateChannel().complete();
+            pc.sendMessage("Sorry hab keine Kamera stells dir einfach vor!").queue();
+        }
+        if (event.getMessage().getContent().contains("nudes")) {
+            PrivateChannel pc = event.getAuthor().openPrivateChannel().complete();
+            pc.sendMessage("Sorry hab keine Kamera stells dir einfach vor!").queue();
+        }
 
     }
 }

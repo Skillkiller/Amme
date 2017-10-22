@@ -72,9 +72,9 @@ public class SQL {
         try{
             if(connection.isClosed())
                 connect();
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`, `prefix`, `logchannel`, `msg`, `autorole`) VALUES (?, ?, 0, 1, 0)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`,`joinchannel`, `prefix`, `logchannel`, `msg`, `autorole`, `joinmessage` ) VALUES (?, ?, _, 0, 1, Welcome %USER% on %GUILD%)");
             ps.setString(1, String.valueOf(guild.getIdLong()));
-            ps.setString(2, STATICS.PREFIX);
+            ps.setString(2, guild.getDefaultChannel().getId());
             ps.execute();
         } catch (SQLException e){
             e.printStackTrace();

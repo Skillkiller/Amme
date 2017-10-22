@@ -156,7 +156,7 @@ public class help implements Command {
 
     @Override
     public String help() {
-        return "HIIIIIIIILFE";
+        return "USAGE: _help";
     }
 
     @Override

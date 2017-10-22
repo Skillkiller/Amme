@@ -92,7 +92,7 @@ public class SpeedTest implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *speedtest";
+        return "USAGE: _speedtest";
     }
 
     @Override

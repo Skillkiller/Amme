@@ -58,7 +58,7 @@ public class shutdown implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *stop";
+        return "USAGE: _stop";
     }
 
     @Override

@@ -52,7 +52,7 @@ public class guildstart implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *startup";
+        return "USAGE: _startup";
     }
 
     @Override

@@ -53,13 +53,13 @@ public class lmgtfy implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *lmgtfy <SEARCH QUERRY>";
+        return "USAGE: _lmgtfy <SEARCH QUERRY>";
 
     }
 
     @Override
     public String description() {
-        return "Creates a Lmgtfy link for a person which needs help";
+        return "Creates a Lmgtfy link for a person which who not wants to google himself";
     }
 
     @Override

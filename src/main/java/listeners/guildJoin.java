@@ -1,10 +1,15 @@
 package listeners;
 
 import core.Main;
+import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.PrivateChannel;
+import net.dv8tion.jda.core.entities.TextChannel;
 import net.dv8tion.jda.core.events.guild.member.GuildMemberJoinEvent;
+import net.dv8tion.jda.core.exceptions.PermissionException;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import util.SQL;
+
+import javax.management.relation.RoleNotFoundException;
 
 /**
  * Butler´s JDA BOT
@@ -20,6 +25,9 @@ import util.SQL;
  */
 public class guildJoin extends ListenerAdapter{
     public void onGuildMemberJoin(GuildMemberJoinEvent event) {
+        Guild guild = event.getGuild();
+        if(!SQL.ifGuildExists(guild))
+            SQL.createServer(guild);
         PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
         if(SQL.getValue(event.getGuild(), "autorole").equals("0")) {
             pc.sendMessage(
@@ -42,6 +50,17 @@ public class guildJoin extends ListenerAdapter{
                 ow.sendMessage("Please enter a valid Autorole Role!").queue();
                 ow.sendMessage(Main.commands.get("settings").help() + "\n Only in Guild do not send commands at PM!");
             }
+            String enabled = SQL.getValue(guild, "joinmessages");
+            String channelid = SQL.getValue(guild, "joinchannel");
+            String joinmsg = SQL.getValue(event.getGuild(), "joinmessage").replace("%USER%", event.getMember().getAsMention()).replace("%GUILD%", event.getGuild().getName());
+            if (!enabled.equals("0")) {
+            try {
+                TextChannel channel = guild.getTextChannelById(channelid);
+                channel.sendTyping().queue();
+            channel.sendMessage(joinmsg).queue();
+            } catch (PermissionException e) {
+                e.printStackTrace();
+            }}
         }
     }
 

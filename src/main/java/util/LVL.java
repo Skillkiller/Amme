@@ -53,7 +53,7 @@ public class LVL {
 
     public static void createUser(User user){
         try{
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `schlaubibot`(`userid`, `points`, `level`) VALUES ( ?, 1, 0)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `schlaubibot`(`userid`, `points`, `level`, `lvl10`, `bday`) VALUES ( ?, 1, 0, 0, 0)");
             ps.setString(1, user.getId());
             ps.execute();
         } catch (SQLException e){

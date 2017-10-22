@@ -20,6 +20,7 @@ import core.CoreCommands;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.*;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
+import util.Cooldown;
 import util.Logger;
 import util.STATICS;
 import util.embedSender;
@@ -313,6 +314,7 @@ public class Music implements Command {
                     guild.getTextChannelsByName("commands", true).get(0).sendMessage(
                             eb.build()
                     ).queue();
+                    guild.getTextChannelsByName("commands", true).get(0).getManager().setTopic(":loud_sound: Current Track: " + track.getInfo().title).queue();
                 } catch (Exception e) {}
             }
         };
@@ -322,10 +324,6 @@ public class Music implements Command {
                 endlessList.forEach(t -> getTrackManager(guild).queue(t, endlessAuthor));
                 if (guild.getTextChannelsByName("commands", true).size() > 0)
                     guild.getTextChannelsByName("commands", true).get(0).sendMessage(embedSender.success().setDescription("Repeated queue. *(endless mode)*").build()).queue();
-            }else {
-                if (guild.getOwner().getUser().getId().equals("221905671296253953")) return;
-              PrivateChannel pc = guild.getOwner().getUser().openPrivateChannel().complete();
-              pc.sendMessage("Please make a #commands channel. :wink:");
             }
 
             new Timer().schedule(new TimerTask() {
@@ -334,9 +332,10 @@ public class Music implements Command {
                     if (player.getPlayingTrack() == null) {
                         if (guild.getTextChannelsByName("commands", true).size() > 0) {
                             guild.getTextChannelsByName("commands", true).get(0).getManager().setTopic(
-                                    "-music help"
+                                    "_music help"
                             ).queue();
                         }
+                        Cooldown.removev("1");
                     }
                 }
             }, 500);
@@ -364,8 +363,7 @@ public class Music implements Command {
         getPlayer(guild).removeListener(audioEventListener);
         getPlayer(guild).addListener(audioEventListener);
 
-        if (STATICS.music_volume > 0)
-            getPlayer(guild).setVolume(STATICS.music_volume);
+
 
         switch (args.length) {
             case 0:
@@ -501,7 +499,7 @@ public class Music implements Command {
                             //chat.sendMessage("You don't have the required permissions to do that! [DJ role]");
                         } else {
                             reset(guild);
-                            //chat.sendMessage("\uD83D\uDD04 Resetting the music player..");
+
                         }
                         break;
 
@@ -512,7 +510,7 @@ public class Music implements Command {
                             getTrackManager(guild).shuffleQueue();
                             event.getChannel().sendMessage(NOTE + "Shuffled queue.  :twisted_rightwards_arrows: ").queue();
                         } else {
-                            //chat.sendMessage("\u26D4 You don't have the permission to do that!");
+                            event.getChannel().sendMessage("\u26D4 You don't have the permission to do that!");
                         }
                         break;
 
@@ -640,7 +638,10 @@ public class Music implements Command {
 
                             if (getPlayer(guild).isPaused())
                                 getPlayer(guild).setPaused(false);
-
+                            if (!Cooldown.hasv("1")) {
+                                getPlayer(guild).setVolume(STATICS.music_volume);
+                                Cooldown.addv("1");
+                            }
                             new Timer().schedule(
                                     new java.util.TimerTask() {
                                         @Override
@@ -720,15 +721,15 @@ public class Music implements Command {
     public String help() {
         return
                 ":musical_note:  **MUSIC PLAYER**  :musical_note: \n\n" +
-                        "` -music play <yt/soundcloud - URL> `  -  Start playing a track / Add a track to queue / Add a playlist to queue\n" +
-                        "` -music playnext <yt/soundcloud - URL>  -  Add track or playlist direct after the current song in queue`\n" +
-                        "` -music queue <Side>`  -  Show the current music queue\n" +
-                        "` -music skip `  -  Skip the current track in queue\n" +
-                        "` -music now `  -  Show info about the now playing track\n" +
-                        "` -music save <name> `  -  Save playing playlist in a file\n" +
-                        "` -music list `  -  Get a list of saved playlists\n" +
-                        "` -music load <name> `  -  play a saved list\n" +
-                        "` -music stop `  -  Stop the music player\n"
+                        "` _music play <yt/soundcloud - URL> `  -  Start playing a track / Add a track to queue / Add a playlist to queue\n" +
+                        "` _music playnext <yt/soundcloud - URL>  -  Add track or playlist direct after the current song in queue`\n" +
+                        "` _music queue <Side>`  -  Show the current music queue\n" +
+                        "` _music skip `  -  Skip the current track in queue\n" +
+                        "` _music now `  -  Show info about the now playing track\n" +
+                        "` _music save <name> `  -  Save playing playlist in a file\n" +
+                        "` _music list `  -  Get a list of saved playlists\n" +
+                        "` _music load <name> `  -  play a saved list\n" +
+                        "` _music stop `  -  Stop the music player\n"
                 ;
     }
 

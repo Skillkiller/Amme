@@ -44,7 +44,7 @@ public class getLvl implements Command{
 
     @Override
     public String help() {
-        return "USAGE: *rank";
+        return "USAGE: _rank";
     }
 
     @Override

@@ -34,7 +34,7 @@ public class STATICS {
 
     public static final String[] PERMS = {"Bot Owner", "Tuhle Typen"};
 
-    public static String PREFIX = "*";
+    public static String PREFIX = "_";
 
     public static String input;
 
