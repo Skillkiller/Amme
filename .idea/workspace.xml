@@ -7,30 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4e53492-1b90-40d4-ac17-a9464299065d" name="Default" comment="[v.0.5] The Helper Update!&#10;&#10;    +Clean Code&#10;    +Removed some little Bugs&#10;    +Added weather command&#10;    +Fixed Bug with creating database&#10;    +Much more!&#10;    -Help me too much info!">
-      <change beforePath="$PROJECT_DIR$/../Amaya/.idea/artifacts/Amaya_jar.xml" afterPath="$PROJECT_DIR$/../Amaya/.idea/artifacts/Amaya_jar.xml" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_15_1.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Amaya/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/Amaya.iml" afterPath="$PROJECT_DIR$/../Amaya/Amaya.iml" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/points.sqlite" afterPath="$PROJECT_DIR$/../Amaya/points.sqlite" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/pom.xml" afterPath="$PROJECT_DIR$/../Amaya/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/Administration/shutdown.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/getLvl.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/chat/say.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/github.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/guildstart.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/help.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/essentials/settings.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/SpeedTest.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/gif.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/etc/lmgtfy.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/commands/music/Music.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/guildJoin.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/privateMessage.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/listeners/privateMessage.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/LVL.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/LVL.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/SQL.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" afterPath="$PROJECT_DIR$/../Amaya/src/main/java/util/STATICS.java" />
-      <change beforePath="$PROJECT_DIR$/../Amaya/src/main/resources/META-INF/MANIFEST.MF" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/../Amaya/out/" />
     <ignored path="$PROJECT_DIR$/../Amaya/target/" />
@@ -52,7 +29,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="1156">
               <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
               <folding />
             </state>
@@ -87,22 +64,10 @@
               <folding>
                 <element signature="e#2055#2056#0" expanded="true" />
                 <element signature="e#2112#2113#0" expanded="true" />
-                <element signature="e#13351#14555#0" expanded="true" />
-                <element signature="e#14554#14555#0" expanded="true" />
-                <element signature="e#15138#15685#0" expanded="true" />
-                <element signature="e#15684#15685#0" expanded="true" />
                 <element signature="e#15725#15726#0" expanded="true" />
                 <element signature="e#15793#15794#0" expanded="true" />
                 <element signature="e#15884#15885#0" expanded="true" />
                 <element signature="e#15912#15913#0" expanded="true" />
-                <element signature="e#26720#27267#0" expanded="true" />
-                <element signature="e#27266#27267#0" expanded="true" />
-                <element signature="e#29042#29665#0" expanded="true" />
-                <element signature="e#29664#29665#0" expanded="true" />
-                <element signature="e#30431#30978#0" expanded="true" />
-                <element signature="e#30977#30978#0" expanded="true" />
-                <element signature="e#31548#32095#0" expanded="true" />
-                <element signature="e#32094#32095#0" expanded="true" />
                 <element signature="e#33746#33747#0" expanded="true" />
                 <element signature="e#33781#33782#0" expanded="true" />
                 <element signature="e#33830#33831#0" expanded="true" />
@@ -279,8 +244,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -379,8 +346,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -574,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1508265792460</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[v.0.5] The Helper Update!&#10;&#10;    +Clean Code&#10;    +Removed some little Bugs&#10;    +Added weather command&#10;    +Fixed Bug with creating database&#10;    +Much more!&#10;    -Help me too much info!">
+      <created>1508691382451</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1508691382451</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -592,7 +564,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -603,7 +574,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2596401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -614,6 +585,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -897,7 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
           <caret line="60" column="24" lean-forward="false" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -988,7 +959,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Amaya/src/main/java/core/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="1156">
           <caret line="95" column="47" lean-forward="false" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
           <folding />
         </state>
@@ -1046,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1057,22 +1027,10 @@
           <folding>
             <element signature="e#2055#2056#0" expanded="true" />
             <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#13351#14555#0" expanded="true" />
-            <element signature="e#14554#14555#0" expanded="true" />
-            <element signature="e#15138#15685#0" expanded="true" />
-            <element signature="e#15684#15685#0" expanded="true" />
             <element signature="e#15725#15726#0" expanded="true" />
             <element signature="e#15793#15794#0" expanded="true" />
             <element signature="e#15884#15885#0" expanded="true" />
             <element signature="e#15912#15913#0" expanded="true" />
-            <element signature="e#26720#27267#0" expanded="true" />
-            <element signature="e#27266#27267#0" expanded="true" />
-            <element signature="e#29042#29665#0" expanded="true" />
-            <element signature="e#29664#29665#0" expanded="true" />
-            <element signature="e#30431#30978#0" expanded="true" />
-            <element signature="e#30977#30978#0" expanded="true" />
-            <element signature="e#31548#32095#0" expanded="true" />
-            <element signature="e#32094#32095#0" expanded="true" />
             <element signature="e#33746#33747#0" expanded="true" />
             <element signature="e#33781#33782#0" expanded="true" />
             <element signature="e#33830#33831#0" expanded="true" />
