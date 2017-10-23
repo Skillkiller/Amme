@@ -3,6 +3,7 @@ package listeners;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import util.LVL;
+import util.SQL;
 
 /**
  * Butler´s JDA BOT
@@ -20,6 +21,9 @@ public class Usercreate extends ListenerAdapter{
     public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
         if (!LVL.ifUserExists(event.getAuthor())) {
             LVL.createUser(event.getAuthor());
+        }
+        if (!SQL.ifGuildExists(event.getGuild())) {
+            SQL.createServer(event.getGuild());
         }
 
     }

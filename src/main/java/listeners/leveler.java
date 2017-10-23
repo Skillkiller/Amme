@@ -70,7 +70,8 @@ public class leveler extends ListenerAdapter{
 
                 if (foo>10) {
                     //Level 10 Achivment
-                    Achivment.level10(event.getMember().getUser(), event.getChannel());
+                    if (LVL.getValue(event.getAuthor(), "lvl10").equals("1")) return;
+                    Achivment.level10(event.getAuthor(), event.getChannel());
                 }
             }
 

@@ -21,7 +21,6 @@ import java.util.ArrayList;
  */
 public class Achivment {
     public static void level10(User user, MessageChannel channel) {
-        if(LVL.getValue(user, "lvl10").equals("1")) {return;}
         channel.sendMessage(new EmbedBuilder()
 
                 .setThumbnail("http://www.bilder-upload.eu/upload/910508-1507225009.png")

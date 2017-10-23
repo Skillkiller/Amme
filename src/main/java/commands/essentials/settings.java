@@ -82,7 +82,19 @@ public class settings implements Command{
                     event.getChannel().sendMessage(help() + "\n(watch for large and lower case\n)");
                     return;
                 }
-
+                String message = String.join(" ", args).split(args[0])[0];
+                SQL.updateValue(guild, "joinmessage", message);
+                embedSender.sendEmbed(":white_check_mark: Succesfully set the Joinmessage!", channel, Color.green);
+                break;
+            case "joinmessagechannel":
+                if (args.length < 2) {
+                    event.getChannel().sendMessage(help() + "\n(watch for large and lower case\n)");
+                    return;
+                }
+                String ch = event.getMessage().getMentionedChannels().get(0).getId();
+                SQL.updateValue(guild, "joinchannel", ch);
+                embedSender.sendEmbed(":white_check_mark: Succesfully set the Joinmessagechannel!", channel, Color.green);
+                break;
         }
     }
 
