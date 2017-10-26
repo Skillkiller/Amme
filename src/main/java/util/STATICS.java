@@ -22,7 +22,7 @@ public class STATICS {
 
     public static String HOST = SECRETS.HOST;
 
-    public static String DATABASE = "Discord";
+    public static String DATABASE = "mysql";
 
     public static  String USERNAME = SECRETS.USERNAME;
 

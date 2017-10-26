@@ -37,9 +37,9 @@ public class settings implements Command{
         Guild guild = event.getGuild();
         MessageChannel channel = event.getChannel();
         if (core.permissionHandler.check(3, event)) return;
-        switch (args[0]) {
+        switch (args[0].toLowerCase()) {
             case "msg":
-                if (args[1].equals("toggle")) {
+                if (args[1].toLowerCase().equals("toggle")) {
                     String enabled = SQL.getValue(guild, "msg");
 
                     if(enabled.equals("1")){

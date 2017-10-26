@@ -20,12 +20,16 @@ import java.sql.*;
 public class SQL {
 
     private static Connection connection;
+    private static String password = SECRETS.password;
     public static void connect(){
         if(!isConnected()){
             try{
+                String host = STATICS.HOST;
+                String port = STATICS.PORT;
+                String database = STATICS.DATABASE;
+                String username = STATICS.USERNAME;
 
-
-                connection = DriverManager.getConnection("jdbc:sqlite:guild.sqlite");
+                connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", username, password);
                 System.out.println("[Amme] GuildLogger Online");
 
             } catch (SQLException e) {

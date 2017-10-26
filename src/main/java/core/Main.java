@@ -2,6 +2,7 @@ package core;
 
 import commands.*;
 import commands.Administration.shutdown;
+import commands.GuildAdmin.Clear;
 import commands.GuildAdmin.kick;
 import commands.chat.fail;
 import commands.chat.getLvl;
@@ -43,6 +44,8 @@ import java.util.HashMap;
  */
 public class Main {
     static JDABuilder builder;
+
+    private static SQL sql;
 
     public static HashMap<String, Command> commands = new HashMap<>();
 
@@ -94,6 +97,7 @@ public class Main {
         commands.put("kick", new kick());
         commands.put("ping", new ping());
         commands.put("weather", new wheater());
+        commands.put("clear", new Clear());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
@@ -123,4 +127,6 @@ public class Main {
 
 
 
-        }}}
+        }}
+
+}
