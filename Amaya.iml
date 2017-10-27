@@ -11,6 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.44-bin" level="project" />
     <orderEntry type="library" name="Maven: fr.bmartel:jspeedtest:1.31.2" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:3.6" level="project" />
     <orderEntry type="library" name="Maven: fr.bmartel:http-endec:1.04" level="project" />
@@ -44,7 +45,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jsoup:jsoup:1.10.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.iharder:base64:2.3.9" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.5" level="project" />
-    <orderEntry type="library" name="Maven: org.xerial:sqlite-jdbc:3.20.0" level="project" />
     <orderEntry type="library" name="Maven: at.mukprojects:giphy4j:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.1.2" level="project" />

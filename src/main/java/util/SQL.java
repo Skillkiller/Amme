@@ -21,14 +21,15 @@ public class SQL {
 
     private static Connection connection;
     private static String password = SECRETS.password;
+
     public static void connect(){
         if(!isConnected()){
             try{
+
                 String host = STATICS.HOST;
                 String port = STATICS.PORT;
                 String database = STATICS.DATABASE;
                 String username = STATICS.USERNAME;
-
                 connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", username, password);
                 System.out.println("[Amme] GuildLogger Online");
 
@@ -76,7 +77,7 @@ public class SQL {
         try{
             if(connection.isClosed())
                 connect();
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`,`joinchannel`, `prefix`, `logchannel`, `msg`, `autorole`, `joinmessage` ) VALUES (?, ?, _, 0, 1, Welcome %USER% on %GUILD%)");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`,`joinchannel`, `prefix`, `logchannel`, `msg`, `autorole`, `joinmessage` ) VALUES (?, ?, '_', '0', '1', '0', 'Welcome %USER% on %GUILD%')");
             ps.setString(1, String.valueOf(guild.getIdLong()));
             ps.setString(2, guild.getDefaultChannel().getId());
             ps.execute();

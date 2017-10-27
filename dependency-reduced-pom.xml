@@ -23,15 +23,23 @@
             <goals>
               <goal>shade</goal>
             </goals>
-            <configuration>
-              <artifactSet>
-                <excludes>
-                  <exclude>example</exclude>
-                </excludes>
-              </artifactSet>
-            </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19.1</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>core.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
       </plugin>
     </plugins>
   </build>

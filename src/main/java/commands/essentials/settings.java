@@ -37,6 +37,7 @@ public class settings implements Command{
         Guild guild = event.getGuild();
         MessageChannel channel = event.getChannel();
         if (core.permissionHandler.check(3, event)) return;
+        if (args.length < 2) event.getChannel().sendMessage(help());
         switch (args[0].toLowerCase()) {
             case "msg":
                 if (args[1].toLowerCase().equals("toggle")) {
@@ -62,7 +63,7 @@ public class settings implements Command{
                 break;
             case "logchannel":
                 if (args.length < 2) {
-                    event.getChannel().sendMessage(help() + "\n(CHANNEL MUST BE A ID)");
+                    event.getChannel().sendMessage(help());
                     return;
                 }
                 String txt = event.getMessage().getMentionedChannels().get(0).getId();
@@ -108,7 +109,7 @@ public class settings implements Command{
     public String help() {
         return "USAGE:\n" +
                 "_settings autorole <ROLENAME> (Set the Autorole at UserJoin | 0 for no Role.)\n" +
-                "_settings logchat <Mention channel> (Set the logchannel | 0 for no Channel.)\n" +
+                "_settings logchannel <Mention channel> (Set the logchannel | 0 for no Channel.)\n" +
                 "_settings prefix <NEWPREFIX> (Set the new Bot Prefix for this Guild)\n" +
                 "_settings msg <Toogle> (Enable/Disable Writecomment)\n" +
                 "_settings joinmessage <Message> (%USER% for the Username %GUILD% for Guildname) (0 for no message)\n" +

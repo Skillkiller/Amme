@@ -19,12 +19,15 @@ import java.sql.*;
  */
 public class LVL {
     private static Connection connection;
+    private static String password = SECRETS.password;
     public static void connect(){
         if(!isConnected()){
             try{
-
-
-                connection = DriverManager.getConnection("jdbc:sqlite:points.sqlite");
+                String host = STATICS.HOST;
+                String port = STATICS.PORT;
+                String database = STATICS.DATABASE;
+                String username = STATICS.USERNAME;
+                connection = DriverManager.getConnection("jdbc:mysql://" + host + ":" + port + "/" + database + "?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", username, password);
                 System.out.println("[Amme] Leveler connected");
 
             } catch (SQLException e) {

@@ -51,7 +51,7 @@ public class guildJoin extends ListenerAdapter{
                 ow.sendMessage("Please enter a valid Autorole Role!").queue();
                 ow.sendMessage(Main.commands.get("settings").help() + "\n Only in Guild do not send commands at PM!");
             }
-            String enabled = SQL.getValue(guild, "joinmessages");
+            String enabled = SQL.getValue(guild, "joinmessage");
             String channelid = SQL.getValue(guild, "joinchannel");
             String joinmsg = SQL.getValue(event.getGuild(), "joinmessage").replace("%USER%", event.getMember().getAsMention()).replace("%GUILD%", event.getGuild().getName());
             if (!enabled.equals("0")) {
