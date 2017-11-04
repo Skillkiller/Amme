@@ -6,6 +6,7 @@ import core.Main;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.PrivateChannel;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.core.exceptions.PermissionException;
 import util.Logger;
 import util.SQL;
 import util.STATICS;
@@ -55,16 +56,18 @@ public class help implements Command {
                     ).queue();
                 else
                     event.getChannel().sendMessage(
-                            eb.setColor(Color.red).setDescription(":warning:  There are currently no information for the command  *-" + args[0] + "* !").build()
+                            eb.setColor(Color.red).setDescription(":warning:  There are currently no information for the command  *_" + args[0] + "* !").build()
                     ).queue();
             else
                 event.getChannel().sendMessage(
-                        eb.setColor(Color.red).setDescription(":warning:  The command list does not contains information for the command *-" + args[0] + "* !").build()
+                        eb.setColor(Color.red).setDescription(":warning:  The command list does not contains information for the command *_" + args[0] + "* !").build()
                 ).queue();
             return;
         }
+        try {event.getMessage().delete().queue();}catch (PermissionException e) {
+            e.printStackTrace();
+        }
 
-        event.getMessage().delete().queue();
 
         Map<String, String> cmds = new TreeMap<>();
         Main.commands.forEach((s, command) -> cmds.put(s, command.description()));

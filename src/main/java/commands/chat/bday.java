@@ -1,6 +1,7 @@
 package commands.chat;
 
 import commands.Command;
+import core.CoreCommands;
 import net.dv8tion.jda.core.EmbedBuilder;
 import net.dv8tion.jda.core.entities.User;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
@@ -89,6 +90,8 @@ public class bday implements Command{
     @Override
     public void executed(boolean success, GuildMessageReceivedEvent event) {
         Logger.logCommand("bday", event);
+        System.out.println(CoreCommands.getCurrentSystemTime() + " [Info] [Commands]: Command '" + event.getMessage().getContent() + "' was executed by '" + event.getAuthor().getName() + "' (" + event.getGuild().getName() + ") in (" + event.getChannel().getId() + ") ");
+
     }
 
     @Override

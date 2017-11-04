@@ -4,10 +4,7 @@ import commands.*;
 import commands.Administration.shutdown;
 import commands.GuildAdmin.Clear;
 import commands.GuildAdmin.kick;
-import commands.chat.fail;
-import commands.chat.getLvl;
-import commands.chat.info;
-import commands.chat.say;
+import commands.chat.*;
 import commands.essentials.github;
 import commands.essentials.guildstart;
 import commands.essentials.help;
@@ -98,6 +95,9 @@ public class Main {
         commands.put("ping", new ping());
         commands.put("weather", new wheater());
         commands.put("clear", new Clear());
+        commands.put("vote", new Vote());
+        commands.put("v", new Vote());
+        commands.put("google", new google());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
@@ -110,6 +110,7 @@ public class Main {
         builder.addEventListener(new Usercreate());
         builder.addEventListener(new leveler());
         builder.addEventListener(new reconnectlistener());
+        builder.addEventListener(new ReactionListener());
 
     }
     public static void handleCommand(commandParser.CommandContainer cmd) throws IOException, ParseException {

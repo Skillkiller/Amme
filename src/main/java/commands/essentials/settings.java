@@ -38,6 +38,7 @@ public class settings implements Command{
         MessageChannel channel = event.getChannel();
         if (core.permissionHandler.check(3, event)) return;
         if (args.length < 2) event.getChannel().sendMessage(help());
+        String joinmessage = SQL.getValue(guild, "joinmessage");
         switch (args[0].toLowerCase()) {
             case "msg":
                 if (args[1].toLowerCase().equals("toggle")) {
@@ -83,9 +84,13 @@ public class settings implements Command{
                     event.getChannel().sendMessage(help() + "\n(watch for large and lower case\n)");
                     return;
                 }
-                String message = String.join(" ", args).split(args[0])[0];
-                SQL.updateValue(guild, "joinmessage", message);
-                embedSender.sendEmbed(":white_check_mark: Succesfully set the Joinmessage!", channel, Color.green);
+                String temp = "";
+                for(int i = 1; i < args.length; i++){
+                    temp += " " + args[i];
+                }
+                SQL.updateValue(guild, "joinmessage", temp.replaceFirst("null ", ""));
+                String up = SQL.getValue(guild, "joinmessage");
+                embedSender.sendEmbed(":white_check_mark:  Successfully set joinmessage to `" + up + "`!", channel, Color.green);
                 break;
             case "joinmessagechannel":
                 if (args.length < 2) {

@@ -2,6 +2,7 @@ package commands.GuildAdmin;
 
 import commands.Command;
 import core.CoreCommands;
+import net.dv8tion.jda.core.entities.Channel;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.entities.PrivateChannel;
 import net.dv8tion.jda.core.entities.User;
@@ -37,20 +38,20 @@ public class kick implements Command{
             if (args.length < 2) event.getChannel().sendMessage(help());
             String reason = String.join(" ", args).split(args[0])[1];
             User kick =  event.getMessage().getMentionedUsers().get(0);
-            event.getChannel().sendMessage(":mans_shoe: " + kick.getAsMention() + " got kicked by " + event.getAuthor().getAsMention() + " (" + event.getMember().getRoles().get(0).getName() + ").\n\n" +
+        String channel = SQL.getValue(g, "logchannel");
+            event.getGuild().getTextChannelById(channel).sendMessage(":mans_shoe: " + kick.getAsMention() + " got kicked by " + event.getAuthor().getAsMention() + " (" + event.getMember().getRoles().get(0).getName() + ").\n\n" +
                     "Reason: " + reason
             ).queue();
+        event.getChannel().sendMessage(":white_check_mark: Sucessfully kicked" + kick.getName()).queue();
         PrivateChannel pc = event.getMessage().getMentionedUsers().get(0).openPrivateChannel().complete();
         pc.sendMessage(
                 "Sorry, you got kicked from Server " + event.getGuild().getName() + " by " + event.getAuthor().getAsMention() + " (" + event.getMember().getRoles().get(0).getName() + ").\n\n" +
                         "Reason: " + reason
         ).queue();
 
-        event.getGuild().getController().kick(
-                event.getGuild().getMember(
-                        event.getMessage().getMentionedUsers().get(0)
-                )
-        ).queue();
+        event.getGuild().getController().kick(event.getGuild().getMember(event.getMessage().getMentionedUsers().get(0))
+        , reason).queue();
+
     }
 
     @Override

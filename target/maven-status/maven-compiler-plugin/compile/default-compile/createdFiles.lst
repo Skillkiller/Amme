@@ -1,3 +1,4 @@
+commands\chat\Vote$Poll.class
 commands\chat\info.class
 listeners\leveler.class
 commands\etc\lmgtfy.class
@@ -8,6 +9,7 @@ commands\Administration\shutdown$1.class
 listeners\userstatus.class
 commands\chat\say.class
 commands\etc\SpeedTest.class
+commands\chat\Vote$1.class
 listeners\writecomment.class
 core\Main.class
 commands\etc\SpeedTest$1.class
@@ -17,7 +19,9 @@ commands\etc\wheater$1.class
 commands\music\Music$6.class
 commands\music\Music$7.class
 listeners\Usercreate.class
+listeners\overflowListener$1.class
 commands\GuildAdmin\Clear.class
+commands\chat\google.class
 commands\etc\ping.class
 listeners\privateMessage.class
 listeners\commandListener.class
@@ -26,8 +30,8 @@ commands\etc\gif$1.class
 commands\essentials\help.class
 commands\etc\shorter.class
 listeners\reconnectlistener.class
+commands\chat\Vote$2.class
 commands\etc\SpeedTest$2.class
-commands\music\Music$8.class
 util\STATICS$CMDTYPE.class
 audioCore\AudioInfo.class
 listeners\guildJoin.class
@@ -36,14 +40,16 @@ commands\chat\getLvl.class
 commands\music\Music.class
 audioCore\TrackManager.class
 listeners\readyListener.class
+commands\chat\Vote.class
 commands\GuildAdmin\Clear$1.class
+commands\music\Music$3$1.class
 listeners\overflowListener.class
 core\permissionHandler.class
 commands\GuildAdmin\kick.class
 commands\music\Music$4.class
 util\JsonReader.class
 core\CoreCommands.class
-audioCore\TrackManager$1.class
+commands\chat\Vote$3.class
 commands\chat\fail.class
 commands\etc\uptime.class
 core\commandParser$CommandContainer.class
@@ -51,7 +57,9 @@ listeners\leveler$2.class
 commands\music\Music$1.class
 util\LVL.class
 commands\chat\bday.class
+commands\chat\Vote$4.class
 audioCore\PlayerSendHandler.class
+listeners\ReactionListener.class
 commands\music\Music$2.class
 listeners\leveler$1.class
 commands\chat\bday$1.class
