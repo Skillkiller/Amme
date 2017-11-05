@@ -18,6 +18,7 @@ commands\Command.class
 commands\etc\wheater$1.class
 commands\music\Music$6.class
 commands\music\Music$7.class
+commands\essentials\Guild.class
 listeners\Usercreate.class
 listeners\overflowListener$1.class
 commands\GuildAdmin\Clear.class
@@ -56,6 +57,7 @@ core\commandParser$CommandContainer.class
 listeners\leveler$2.class
 commands\music\Music$1.class
 util\LVL.class
+commands\Administration\test.class
 commands\chat\bday.class
 commands\chat\Vote$4.class
 audioCore\PlayerSendHandler.class

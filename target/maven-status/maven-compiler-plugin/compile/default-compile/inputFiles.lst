@@ -37,6 +37,7 @@ D:\Amaya\src\main\java\util\STATICS.java
 D:\Amaya\src\main\java\core\Main.java
 D:\Amaya\src\main\java\util\LVL.java
 D:\Amaya\src\main\java\commands\essentials\guildstart.java
+D:\Amaya\src\main\java\commands\Administration\test.java
 D:\Amaya\src\main\java\commands\chat\getLvl.java
 D:\Amaya\src\main\java\commands\chat\google.java
 D:\Amaya\src\main\java\util\Cooldown.java
@@ -47,5 +48,6 @@ D:\Amaya\src\main\java\listeners\readyListener.java
 D:\Amaya\src\main\java\audioCore\TrackManager.java
 D:\Amaya\src\main\java\commands\essentials\settings.java
 D:\Amaya\src\main\java\listeners\overflowListener.java
+D:\Amaya\src\main\java\commands\essentials\Guild.java
 D:\Amaya\src\main\java\commands\etc\ping.java
 D:\Amaya\src\main\java\commands\essentials\github.java

@@ -29,6 +29,7 @@ public class guildJoin extends ListenerAdapter{
         if(!SQL.ifGuildExists(guild))
             SQL.createServer(guild);
         if (event.getMember().getUser().isBot()) return;
+        if (event.getGuild().getId().equals("307084334198816769")) return;
         PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
         if(SQL.getValue(event.getGuild(), "autorole").equals("0")) {
             pc.sendMessage(

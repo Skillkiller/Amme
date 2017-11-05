@@ -5,10 +5,7 @@ import commands.Administration.shutdown;
 import commands.GuildAdmin.Clear;
 import commands.GuildAdmin.kick;
 import commands.chat.*;
-import commands.essentials.github;
-import commands.essentials.guildstart;
-import commands.essentials.help;
-import commands.essentials.settings;
+import commands.essentials.*;
 import commands.etc.*;
 import commands.music.Music;
 import listeners.*;
@@ -98,6 +95,7 @@ public class Main {
         commands.put("vote", new Vote());
         commands.put("v", new Vote());
         commands.put("google", new google());
+        commands.put("guild", new Guild());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
