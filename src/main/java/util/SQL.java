@@ -77,11 +77,8 @@ public class SQL {
         try{
             if(connection.isClosed())
                 connect();
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`,  `music`, `joinchannel`, `logchannel`, `prefix`, `msg`, `autorole`, `joinmessage`) VALUES (?, ?, ?, ?, '_', '1', '0', 'Welcome %user% on %guild%')");
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO `guild`(`serverid`,  `music`, `joinchannel`, `logchannel`, `prefix`, `msg`, `autorole`, `joinmessage`) VALUES (?, '0', '0', '0', '_', '1', '0', 'Welcome %user% on %guild%')");
             ps.setString(1, String.valueOf(guild.getIdLong()));
-            ps.setString(2, guild.getTextChannelsByName("music", true).get(0).getName());
-            ps.setString(3, guild.getTextChannelsByName("randomstuff", true).get(0).getId());
-            ps.setString(4, guild.getTextChannelsByName("log", true).get(0).getId());
             ps.execute();
         } catch (SQLException e){
             e.printStackTrace();

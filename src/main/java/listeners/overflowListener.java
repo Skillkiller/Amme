@@ -48,9 +48,11 @@ public class overflowListener extends ListenerAdapter{
                             controller.createTextChannel(s).queue(chan -> chan.getManager().setParent((Category) cat).queue())
                     );
                 });
-
+                SQL.updateValue(guild, "music", event.getGuild().getTextChannelsByName("music", true).get(0).getName());
+                SQL.updateValue(guild, "logchannel", event.getGuild().getTextChannelsByName("log", true).get(0).getId());
+                SQL.updateValue(guild, "joinchannel", event.getGuild().getTextChannelsByName("randomstuff", true).get(0).getId());
             }
-        }, 500);
+        }, 5000);
 
 
     }

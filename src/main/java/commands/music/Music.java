@@ -39,6 +39,8 @@ import java.util.List;
 
 public class Music implements Command {
 
+
+
     private static String clueURL = "https://youtu.be/IITW4P52gC4";
 
     private static final String NOTE = ":musical_note:  ";
@@ -309,9 +311,10 @@ public class Music implements Command {
     private AudioEventListener audioEventListener = new AudioEventAdapter() {
         @Override
         public void onTrackStart(AudioPlayer player, AudioTrack track) {
+            if (SQL.getValue(guild, "music") != "0") {
             if (guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).size() > 0) {
                 guild.getTextChannelsByName("commands", true).get(0).getManager().setTopic(":loud_sound: Current Track: " + track.getInfo().title).queue();
-            }
+            }}
 
                 Set<AudioInfo> queue = getTrackManager(guild).getQueuedTracks();
                 ArrayList<AudioInfo> tracks = new ArrayList<>();
@@ -323,9 +326,10 @@ public class Music implements Command {
                             .setDescription(NOTE + "   **Now Playing**   ")
                             .addField("Current Track", "`(" + getTimestamp(track.getDuration()) + ")`  " + track.getInfo().title, false)
                             .addField("Next Track", "`(" + getTimestamp(tracks.get(1).getTrack().getDuration()) + ")`  " + tracks.get(1).getTrack().getInfo().title, false);
+                    if (SQL.getValue(guild, "music") != "0") {
                     guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).get(0).sendMessage(
                             eb.build()
-                    ).queue();
+                    ).queue();}
                 } catch (Exception e) {}
             }
 
@@ -335,18 +339,20 @@ public class Music implements Command {
 
             if (getTrackManager(guild).getQueuedTracks().size() < 2 && endlessMode) {
                 endlessList.forEach(t -> getTrackManager(guild).queue(t, endlessAuthor));
-                if (guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).size() > 0)
+                if (SQL.getValue(guild, "music") != "0") {
+                if (guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).size() > 0) {
                     guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).get(0).sendMessage(util.embedSender.success().setDescription("Repeated queue. *(endless mode)*").build()).queue();
-            }
+                }}}
 
             new Timer().schedule(new TimerTask() {
                 @Override
                 public void run() {
                     if (player.getPlayingTrack() == null) {
+                        if (SQL.getValue(guild, "music") != "0") {
                         if (guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).size() > 0) {
                             guild.getTextChannelsByName(SQL.getValue(guild, "music"), true).get(0).getManager().setTopic(
                                     "_music help"
-                            ).queue();
+                            ).queue();}
                         }
                         if (getTrackManager(guild).getQueuedTracks().size() <= 0) {
                             guild.getAudioManager().closeAudioConnection();
