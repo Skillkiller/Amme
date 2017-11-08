@@ -1,6 +1,7 @@
 package core;
 
 import commands.*;
+import commands.Administration.Restart;
 import commands.Administration.shutdown;
 import commands.GuildAdmin.Clear;
 import commands.GuildAdmin.kick;
@@ -48,7 +49,9 @@ public class Main {
     public static JDA jda;
 
     public static void main(String[] args) throws IOException {
-
+        //Code by ZekroTJA(github.com/ZekroTJA)
+        StartArgumentHandler.args = args;
+        //MY CODE
         builder = new JDABuilder(AccountType.BOT)
                 .setToken(SECRETS.TOKEN)
                 .setAudioEnabled(true)
@@ -96,6 +99,8 @@ public class Main {
         commands.put("v", new Vote());
         commands.put("google", new google());
         commands.put("guild", new Guild());
+        commands.put("restart", new Restart());
+        commands.put("userinfo", new UserInfo());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
