@@ -66,6 +66,7 @@ public class help implements Command {
         }
         try {event.getMessage().delete().queue();}catch (PermissionException e) {
             e.printStackTrace();
+            event.getChannel().sendMessage("Some Command wont work because i dont have the Permissions!But i´ve send you the Help!").queue();
         }
 
 

@@ -71,7 +71,7 @@ public class Vote implements Command, Serializable {
             public void run() {
                 mymsg.delete().queue();
             }
-        }, 2000);
+        }, 1000);
     }
 
     private static void privateMessage(String content, Color color, GuildMessageReceivedEvent event){
@@ -174,7 +174,7 @@ public class Vote implements Command, Serializable {
         }
 
         if(poll.votes.containsKey(event.getAuthor().getId())){
-            message("Sorry, but you can only vote at once for a poll", Color.red);
+             message("Sorry, but you can only vote at once for a poll", Color.red);
             return;
         }
 

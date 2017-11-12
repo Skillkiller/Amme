@@ -1,6 +1,7 @@
 package commands.Administration;
 
 import commands.Command;
+import net.dv8tion.jda.core.entities.Invite;
 import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 
 import java.io.IOException;
@@ -26,8 +27,8 @@ public class test implements Command{
     @Override
     public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
 if (core.permissionHandler.check(4,event)) return;
-
-        System.out.println(event.getJDA().getGuildById("331782548617428992").getName());
+       Invite i = event.getJDA().getGuildById("315886866903859202").getTextChannels().get(0).createInvite().complete();
+        System.out.println(i.getURL());
 
     }
 

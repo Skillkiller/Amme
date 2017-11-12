@@ -3,6 +3,7 @@ package core;
 import commands.*;
 import commands.Administration.Restart;
 import commands.Administration.shutdown;
+import commands.Administration.test;
 import commands.GuildAdmin.Clear;
 import commands.GuildAdmin.kick;
 import commands.chat.*;
@@ -101,6 +102,8 @@ public class Main {
         commands.put("guild", new Guild());
         commands.put("restart", new Restart());
         commands.put("userinfo", new UserInfo());
+        commands.put("bday", new bday());
+        commands.put("test", new test());
     }
     private static void initializeListeners() {
         builder.addEventListener(new commandListener());
@@ -114,7 +117,6 @@ public class Main {
         builder.addEventListener(new leveler());
         builder.addEventListener(new reconnectlistener());
         builder.addEventListener(new ReactionListener());
-
     }
     public static void handleCommand(commandParser.CommandContainer cmd) throws IOException, ParseException {
 
