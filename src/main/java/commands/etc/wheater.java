@@ -32,7 +32,7 @@ public class wheater implements Command{
 
     @Override
     public void action(String[] args, GuildMessageReceivedEvent event) throws ParseException, IOException {
-        if (args.length < 1) {
+        if (args.length < 2) {
             event.getChannel().sendMessage(help());
             return;
         }

@@ -1,5 +1,6 @@
 package listeners;
 
+import commands.chat.Vote;
 import net.dv8tion.jda.core.entities.Guild;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
@@ -33,7 +34,7 @@ public class readyListener extends ListenerAdapter {
         System.out.println(out);
 
         STATICS.lastRestart = new Date();
-
+        Vote.loadPolls(event.getJDA());
 
 
 

@@ -22,9 +22,7 @@ public class Usercreate extends ListenerAdapter{
         if (!LVL.ifUserExists(event.getAuthor())) {
             LVL.createUser(event.getAuthor());
         }
-        if (!SQL.ifGuildExists(event.getGuild())) {
-            SQL.createServer(event.getGuild());
-        }
+
 
     }
 }

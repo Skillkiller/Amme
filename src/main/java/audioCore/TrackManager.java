@@ -34,7 +34,7 @@ public class TrackManager extends AudioEventAdapter {
     public void onTrackStart(AudioPlayer player, AudioTrack track) {
         AudioInfo info = queue.element();
         VoiceChannel vChan = info.getAuthor().getVoiceState().getChannel();
-        if (vChan == null) { // User has left all voice channels
+        if (vChan == null) {
             player.stopTrack();
         } else {
             info.getAuthor().getGuild().getAudioManager().openAudioConnection(vChan);
@@ -45,23 +45,12 @@ public class TrackManager extends AudioEventAdapter {
     public void onTrackEnd(AudioPlayer player, AudioTrack track, AudioTrackEndReason endReason) {
         try {
             Guild g = queue.poll().getAuthor().getGuild();
-
             if (queue.isEmpty()) {
-
-                new Timer().schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        g.getAudioManager().closeAudioConnection();
-                    }
-                }, 3000);
-
-
+                g.getAudioManager().closeAudioConnection();
             } else {
                 player.playTrack(queue.element().getTrack());
             }
-        } catch (NullPointerException ignored){
-
-        }
+        } catch (Exception e) {}
     }
 
     public void shuffleQueue() {

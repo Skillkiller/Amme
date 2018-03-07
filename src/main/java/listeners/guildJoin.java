@@ -29,6 +29,7 @@ public class guildJoin extends ListenerAdapter{
         if(!SQL.ifGuildExists(guild))
             SQL.createServer(guild);
         if (event.getMember().getUser().isBot()) return;
+        if (event.getGuild().getId().equals("307084334198816769")) return;
         PrivateChannel pc = event.getMember().getUser().openPrivateChannel().complete();
         if(SQL.getValue(event.getGuild(), "autorole").equals("0")) {
             pc.sendMessage(
@@ -51,17 +52,14 @@ public class guildJoin extends ListenerAdapter{
                 ow.sendMessage("Please enter a valid Autorole Role!").queue();
                 ow.sendMessage(Main.commands.get("settings").help() + "\n Only in Guild do not send commands at PM!");
             }
-            String enabled = SQL.getValue(guild, "joinmessages");
+            String enabled = SQL.getValue(guild, "joinchannel");
             String channelid = SQL.getValue(guild, "joinchannel");
-            String joinmsg = SQL.getValue(event.getGuild(), "joinmessage").replace("%USER%", event.getMember().getAsMention()).replace("%GUILD%", event.getGuild().getName());
+            String joinmessage = SQL.getValue(guild, "joinmessage").replace("%user%", event.getUser().getAsMention()).replace("%guild%", guild.getName());
             if (!enabled.equals("0")) {
-            try {
                 TextChannel channel = guild.getTextChannelById(channelid);
                 channel.sendTyping().queue();
-            channel.sendMessage(joinmsg).queue();
-            } catch (PermissionException e) {
-                e.printStackTrace();
-            }}
+                channel.sendMessage(joinmessage).queue();
+            }
         }
     }
 

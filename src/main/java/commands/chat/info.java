@@ -38,7 +38,7 @@ public class info implements Command{
                 .addBlankField(false)
                 .addField("Contributors for the Bot", "Zekro: \n" + "https://github.com/zekroTJA \n\n" + "Schlaubi: \n" + "https://github.com/DRSchlaubi \n\n", false)
                 .addBlankField(false)
-                .addField("Bot Invite Link", "[Invite](https://discordapp.com/oauth2/authorize?client_id=358288923065319426&scope=bot&permissions=0)", false)
+                .addField("Bot Invite Link", "[Invite](https://discordapp.com/oauth2/authorize?client_id=358288923065319426&scope=bot&permissions=2113399935)", false)
                         .build()
 
         ).queue();
