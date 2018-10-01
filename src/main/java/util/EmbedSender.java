@@ -17,7 +17,7 @@ import java.awt.*;
  * <p>
  * © DARK DEVS 2017
  */
-public class embedSender {
+public class EmbedSender {
 
     public static EmbedBuilder success() {
         return new EmbedBuilder().setColor(Color.green);
