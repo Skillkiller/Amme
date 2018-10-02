@@ -73,8 +73,9 @@ target/generated-sources/
 /src/main/java/util/SECRETS.java
 !/src/main/java/util/STATICS.java
 src/main/java/util/SECRETS.java
-target
+target/
 /.idea
+.idea
 Amaya.iml
 dependency-reduced-pom.xml
 out
